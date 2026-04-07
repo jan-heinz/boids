@@ -144,14 +144,15 @@ public class SheepAgent : MonoBehaviour
     // combines boid forces and clamps them once so the total respects the steering limit
     private void ApplyBoidBehaviors()
     {
-        if (settings == null || neighbors.Count == 0)
+        if (settings == null)
         {
             return;
         }
 
-        Vector2 separationForce = ComputeSeparationForce();
-        Vector2 alignmentForce = ComputeAlignmentForce();
-        Vector2 cohesionForce = ComputeCohesionForce();
+        Vector2 separationForce = neighbors.Count > 0 ? ComputeSeparationForce() : Vector2.zero;
+        Vector2 alignmentForce = neighbors.Count > 0 ? ComputeAlignmentForce() : Vector2.zero;
+        Vector2 cohesionForce = neighbors.Count > 0 ? ComputeCohesionForce() : Vector2.zero;
+        Vector2 sheepdogForce = ComputeSheepdogForce();
         Vector2 totalForce = separationForce + alignmentForce + cohesionForce;
         Vector2 rawTotalForce = totalForce;
         float totalComponentMagnitude =
@@ -160,14 +161,22 @@ public class SheepAgent : MonoBehaviour
             cohesionForce.magnitude;
         float maxSteeringStep = settings.MaxSteeringForce * Time.fixedDeltaTime;
         Vector2 startingVelocity = currentVelocity;
+        Vector2 combinedForce = totalForce + sheepdogForce;
 
-        if (totalForce.magnitude > maxSteeringStep && maxSteeringStep > 0f)
+        if (combinedForce.sqrMagnitude <= 0.0001f)
         {
-            float scale = maxSteeringStep / totalForce.magnitude;
+            return;
+        }
+
+        if (combinedForce.magnitude > maxSteeringStep && maxSteeringStep > 0f)
+        {
+            float scale = maxSteeringStep / combinedForce.magnitude;
             separationForce *= scale;
             alignmentForce *= scale;
             cohesionForce *= scale;
+            sheepdogForce *= scale;
             totalForce *= scale;
+            combinedForce *= scale;
         }
 
         lastBoidTurnAngle = GetSignedAngle(startingVelocity, startingVelocity + totalForce);
@@ -176,7 +185,7 @@ public class SheepAgent : MonoBehaviour
         lastAlignmentForce = alignmentForce;
         lastCohesionForce = cohesionForce;
         lastBoidSteeringForce = totalForce;
-        currentVelocity += totalForce;
+        currentVelocity += combinedForce;
     }
 
     // pushes the sheep away from nearby neighbors that are too close
@@ -270,6 +279,55 @@ public class SheepAgent : MonoBehaviour
 
         Vector2 desiredVelocity = toNeighborCenter.normalized * settings.MoveSpeed;
         return (desiredVelocity - currentVelocity) * settings.CohesionWeight;
+    }
+
+    // pushes sheep away from any placed sheepdogs that are nearby
+    private Vector2 ComputeSheepdogForce()
+    {
+        IReadOnlyList<Sheepdog> sheepdogs = Sheepdog.ActiveSheepdogs;
+
+        if (sheepdogs.Count == 0)
+        {
+            return Vector2.zero;
+        }
+
+        Vector2 pressureDirection = Vector2.zero;
+        Vector2 position = rb.position;
+
+        for (int i = 0; i < sheepdogs.Count; i++)
+        {
+            Sheepdog sheepdog = sheepdogs[i];
+
+            if (sheepdog == null || !sheepdog.IsPlaced)
+            {
+                continue;
+            }
+
+            Vector2 awayFromDog = position - (Vector2)sheepdog.transform.position;
+            float distance = awayFromDog.magnitude;
+
+            if (distance > sheepdog.InfluenceRadius)
+            {
+                continue;
+            }
+
+            if (distance <= 0.0001f)
+            {
+                awayFromDog = GetEmergencyScatterDirection();
+                distance = 0f;
+            }
+
+            float pressure = sheepdog.GetPressure(distance);
+            pressureDirection += awayFromDog.normalized * pressure;
+        }
+
+        if (pressureDirection.sqrMagnitude <= 0.0001f)
+        {
+            return Vector2.zero;
+        }
+
+        Vector2 desiredVelocity = pressureDirection.normalized * settings.MoveSpeed;
+        return (desiredVelocity - currentVelocity) * pressureDirection.magnitude;
     }
 
     // settles sheep down after they reach the goal area
@@ -551,6 +609,18 @@ public class SheepAgent : MonoBehaviour
         }
 
         return 1f - Mathf.Clamp01(hit.distance / probeDistance);
+    }
+
+    // picks a fallback direction when the sheepdog is placed directly on a sheep
+    private Vector2 GetEmergencyScatterDirection()
+    {
+        if (currentVelocity.sqrMagnitude > 0.0001f)
+        {
+            return currentVelocity.normalized;
+        }
+
+        float angle = Mathf.Abs(GetInstanceID() * 0.137f) % 360f;
+        return Rotate(Vector2.right, angle).normalized;
     }
 
     // rotates a 2d direction by the given angle in degrees

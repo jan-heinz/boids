@@ -36,15 +36,10 @@ public class GoalScoreDisplay : MonoBehaviour
             goalArea = FindFirstObjectByType<GoalArea>();
         }
 
-        scoreStyle = new GUIStyle
-        {
-            alignment = TextAnchor.MiddleCenter,
-            fontSize = fontSize,
-            normal =
-            {
-                textColor = textColor
-            }
-        };
+        scoreStyle = new GUIStyle();
+        scoreStyle.alignment = TextAnchor.MiddleCenter;
+        scoreStyle.fontSize = fontSize;
+        scoreStyle.normal.textColor = textColor;
     }
 
     // draws the score over the goal area in screen space
