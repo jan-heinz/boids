@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 // handles basic movement for one sheep before any flocking behavior is added
 [RequireComponent(typeof(Rigidbody2D))]
@@ -20,28 +21,21 @@ public class SheepAgent : MonoBehaviour
 
     // -------------------------------------------------------------------------------------------------------------
 
-    [Header("Movement")]
-    [SerializeField, Min(0f)]
-    [Tooltip("Normal speed this sheep tries to maintain while moving")]
-    private float moveSpeed = 4f;
-
-    // -------------------------------------------------------------------------------------------------------------
-
     [Header("Obstacle Avoidance")]
     [SerializeField]
     [Tooltip("Layers this sheep should treat as obstacles")]
     private LayerMask obstacleLayers;
 
-    [SerializeField, Min(0f)]
-    [Tooltip("How far this sheep checks for nearby obstacles")]
-    private float obstacleCheckRadius = 1.5f;
-
     private Vector2 currentVelocity;
     private readonly Collider2D[] nearbyObstacles = new Collider2D[16];
+    private readonly List<SheepAgent> neighbors = new();
     private Rigidbody2D rb;
     private Collider2D sheepCollider;
+    private FlockManager flockManager;
 
     public Vector2 CurrentVelocity => currentVelocity;
+    public IReadOnlyList<SheepAgent> Neighbors => neighbors;
+    public int NeighborCount => neighbors.Count;
 
     // lets a spawner choose the sheep's initial heading before play starts
     public void SetStartingDirection(Vector2 direction)
@@ -52,6 +46,12 @@ public class SheepAgent : MonoBehaviour
         }
 
         startingDirection = direction.normalized;
+    }
+
+    // lets the sheep look up the rest of the spawned flock
+    public void SetFlockManager(FlockManager manager)
+    {
+        flockManager = manager;
     }
 
     // grabs the rigidbody used to move the sheep through the physics system
@@ -83,12 +83,14 @@ public class SheepAgent : MonoBehaviour
             ? startingDirection.normalized
             : Vector2.right;
 
-        currentVelocity = direction * moveSpeed;
+        currentVelocity = direction * settings.MoveSpeed;
     }
 
     // steers and moves the sheep during the physics step
     private void FixedUpdate()
     {
+        UpdateNeighbors();
+        ApplySeparation();
         bool isAvoidingObstacle = ApplyObstacleAvoidance();
         ClampSpeed();
         if (!isAvoidingObstacle)
@@ -98,11 +100,95 @@ public class SheepAgent : MonoBehaviour
         rb.linearVelocity = currentVelocity;
     }
 
+    // pushes the sheep away from nearby neighbors that are too close
+    private void ApplySeparation()
+    {
+        if (settings == null || neighbors.Count == 0)
+        {
+            return;
+        }
+
+        float separationRadiusSqr = settings.SeparationRadius * settings.SeparationRadius;
+        Vector2 separationDirection = Vector2.zero;
+        Vector2 position = rb.position;
+
+        for (int i = 0; i < neighbors.Count; i++)
+        {
+            SheepAgent neighbor = neighbors[i];
+
+            if (neighbor == null)
+            {
+                continue;
+            }
+
+            Vector2 awayFromNeighbor = position - neighbor.rb.position;
+            float distanceSqr = awayFromNeighbor.sqrMagnitude;
+
+            if (distanceSqr <= 0.0001f || distanceSqr > separationRadiusSqr)
+            {
+                continue;
+            }
+
+            // gives a stronger push when another sheep is very close
+            separationDirection += awayFromNeighbor.normalized / distanceSqr;
+        }
+
+        if (separationDirection.sqrMagnitude <= 0.0001f)
+        {
+            return;
+        }
+
+        Vector2 desiredVelocity = separationDirection.normalized * settings.MoveSpeed;
+        Vector2 steeringForce = (desiredVelocity - currentVelocity) * settings.SeparationWeight;
+        steeringForce = Vector2.ClampMagnitude(steeringForce, settings.MaxSteeringForce * Time.fixedDeltaTime);
+
+        currentVelocity += steeringForce;
+    }
+
+    // rebuilds the nearby sheep list using the shared neighbor radius
+    private void UpdateNeighbors()
+    {
+        neighbors.Clear();
+
+        if (flockManager == null)
+        {
+            return;
+        }
+
+        if (settings == null)
+        {
+            return;
+        }
+
+        float neighborRadiusSqr = settings.NeighborRadius * settings.NeighborRadius;
+        Vector2 position = rb.position;
+        IReadOnlyList<SheepAgent> flockSheep = flockManager.Sheep;
+
+        for (int i = 0; i < flockSheep.Count; i++)
+        {
+            SheepAgent otherSheep = flockSheep[i];
+
+            if (otherSheep == null || otherSheep == this)
+            {
+                continue;
+            }
+
+            Vector2 offset = otherSheep.rb.position - position;
+
+            if (offset.sqrMagnitude > neighborRadiusSqr)
+            {
+                continue;
+            }
+
+            neighbors.Add(otherSheep);
+        }
+    }
+
     // steers the sheep away from nearby fence colliders
     private bool ApplyObstacleAvoidance()
     {
         Vector2 position = rb.position;
-        int obstacleCount = Physics2D.OverlapCircle(position, obstacleCheckRadius, new ContactFilter2D
+        int obstacleCount = Physics2D.OverlapCircle(position, settings.ObstacleCheckRadius, new ContactFilter2D
         {
             useLayerMask = true,
             layerMask = obstacleLayers,
@@ -135,7 +221,7 @@ public class SheepAgent : MonoBehaviour
             }
 
             float distance = awayFromObstacle.magnitude;
-            float weight = 1f - Mathf.Clamp01(distance / obstacleCheckRadius);
+            float weight = 1f - Mathf.Clamp01(distance / settings.ObstacleCheckRadius);
             avoidanceDirection += awayFromObstacle.normalized * weight;
         }
 
@@ -145,7 +231,7 @@ public class SheepAgent : MonoBehaviour
         }
 
         // turns the sheep away from the nearest fence pressure
-        Vector2 desiredVelocity = avoidanceDirection.normalized * moveSpeed;
+        Vector2 desiredVelocity = avoidanceDirection.normalized * settings.MoveSpeed;
         Vector2 steeringForce = desiredVelocity - currentVelocity;
         steeringForce = Vector2.ClampMagnitude(steeringForce, settings.MaxSteeringForce * Time.fixedDeltaTime);
 
@@ -156,7 +242,7 @@ public class SheepAgent : MonoBehaviour
     // prevents runtime movement from exceeding the speed limit in settings
     private void ClampSpeed()
     {
-        currentVelocity = Vector2.ClampMagnitude(currentVelocity, settings.MaxSpeed);
+        currentVelocity = Vector2.ClampMagnitude(currentVelocity, settings.MoveSpeed);
     }
 
     // keeps the sheep moving at its normal cruising speed after steering changes its velocity
@@ -164,11 +250,11 @@ public class SheepAgent : MonoBehaviour
     {
         if (currentVelocity.sqrMagnitude <= 0.0001f)
         {
-            currentVelocity = GetStartingDirection() * moveSpeed;
+            currentVelocity = GetStartingDirection() * settings.MoveSpeed;
             return;
         }
 
-        currentVelocity = currentVelocity.normalized * moveSpeed;
+        currentVelocity = currentVelocity.normalized * settings.MoveSpeed;
     }
 
     // uses the chosen start direction when valid otherwise falls back to the right
@@ -177,5 +263,17 @@ public class SheepAgent : MonoBehaviour
         return startingDirection.sqrMagnitude > 0f
             ? startingDirection.normalized
             : Vector2.right;
+    }
+
+    // draws the neighbor radius when the debug panel toggle is enabled
+    private void OnDrawGizmos()
+    {
+        if (!BoidDebugPanel.ShowNeighborRadius || settings == null)
+        {
+            return;
+        }
+
+        Gizmos.color = new Color(0.2f, 0.85f, 1f, 1f);
+        Gizmos.DrawWireSphere(transform.position, settings.NeighborRadius);
     }
 }

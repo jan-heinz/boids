@@ -12,10 +12,6 @@ public class BoidSettings : ScriptableObject
     private float moveSpeed = 4f;
 
     [SerializeField, Min(0f)]
-    [Tooltip("Maximum speed a sheep is allowed to reach")]
-    private float maxSpeed = 6f;
-
-    [SerializeField, Min(0f)]
     [Tooltip("Maximum steering force applied in a single update")]
     private float maxSteeringForce = 3f;
 
@@ -29,6 +25,10 @@ public class BoidSettings : ScriptableObject
     [SerializeField, Min(0f)]
     [Tooltip("How close another sheep can get before separation pushes away")]
     private float separationRadius = 1f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How far a sheep checks for nearby obstacles")]
+    private float obstacleCheckRadius = 1.5f;
 
     // -------------------------------------------------------------------------------------------------------------
 
@@ -49,19 +49,81 @@ public class BoidSettings : ScriptableObject
     [Tooltip("How strongly sheep are pushed back toward the sandbox when near an edge")]
     private float boundsWeight = 2f;
 
-    public float MoveSpeed => moveSpeed;
-    public float MaxSpeed => maxSpeed;
-    public float MaxSteeringForce => maxSteeringForce;
-    public float NeighborRadius => neighborRadius;
-    public float SeparationRadius => separationRadius;
-    public float SeparationWeight => separationWeight;
-    public float AlignmentWeight => alignmentWeight;
-    public float CohesionWeight => cohesionWeight;
-    public float BoundsWeight => boundsWeight;
+    public float MoveSpeed
+    {
+        get => moveSpeed;
+        set
+        {
+            moveSpeed = Mathf.Max(0f, value);
+            ClampValues();
+        }
+    }
 
+    public float MaxSteeringForce
+    {
+        get => maxSteeringForce;
+        set => maxSteeringForce = Mathf.Max(0f, value);
+    }
+
+    public float NeighborRadius
+    {
+        get => neighborRadius;
+        set
+        {
+            neighborRadius = Mathf.Max(0f, value);
+            ClampValues();
+        }
+    }
+
+    public float SeparationRadius
+    {
+        get => separationRadius;
+        set
+        {
+            separationRadius = Mathf.Max(0f, value);
+            ClampValues();
+        }
+    }
+
+    public float ObstacleCheckRadius
+    {
+        get => obstacleCheckRadius;
+        set => obstacleCheckRadius = Mathf.Max(0f, value);
+    }
+
+    public float SeparationWeight
+    {
+        get => separationWeight;
+        set => separationWeight = Mathf.Max(0f, value);
+    }
+
+    public float AlignmentWeight
+    {
+        get => alignmentWeight;
+        set => alignmentWeight = Mathf.Max(0f, value);
+    }
+
+    public float CohesionWeight
+    {
+        get => cohesionWeight;
+        set => cohesionWeight = Mathf.Max(0f, value);
+    }
+
+    public float BoundsWeight
+    {
+        get => boundsWeight;
+        set => boundsWeight = Mathf.Max(0f, value);
+    }
+
+    // keeps related values in a valid range
+    private void ClampValues()
+    {
+        separationRadius = Mathf.Min(separationRadius, neighborRadius);
+    }
+
+    // reapplies the same value guards after inspector edits
     private void OnValidate()
     {
-        maxSpeed = Mathf.Max(maxSpeed, moveSpeed);
-        separationRadius = Mathf.Min(separationRadius, neighborRadius);
+        ClampValues();
     }
 }

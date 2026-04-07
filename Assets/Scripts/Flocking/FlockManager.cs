@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 // spawns a group of sheep into the scene without any flock behavior yet
 public class FlockManager : MonoBehaviour
@@ -30,6 +31,9 @@ public class FlockManager : MonoBehaviour
     private bool randomizeStartingDirection = true;
 
     private Bounds spawnBounds;
+    private readonly List<SheepAgent> sheep = new();
+
+    public IReadOnlyList<SheepAgent> Sheep => sheep;
 
     // spawns the initial sheep group when play mode begins
     private void Start()
@@ -63,6 +67,8 @@ public class FlockManager : MonoBehaviour
         {
             Vector2 spawnPosition = GetRandomSpawnPosition();
             SheepAgent sheep = Instantiate(sheepPrefab, spawnPosition, Quaternion.identity, sheepParent);
+            sheep.SetFlockManager(this);
+            this.sheep.Add(sheep);
 
             if (!randomizeStartingDirection)
             {

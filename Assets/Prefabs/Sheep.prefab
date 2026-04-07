@@ -175,4 +175,4 @@ MonoBehaviour:
   obstacleLayers:
     serializedVersion: 2
     m_Bits: 64
-  obstacleCheckRadius: 5
+  obstacleCheckRadius: 7.5
