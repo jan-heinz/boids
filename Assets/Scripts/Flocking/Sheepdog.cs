@@ -51,6 +51,7 @@ public class Sheepdog : MonoBehaviour
     private bool isPlaced;
     private bool hasMoveTarget;
     private Vector2 moveTarget;
+    private Vector2 currentVelocity;
 
     public static IReadOnlyList<Sheepdog> ActiveSheepdogs => activeSheepdogs;
     public float CollisionSize => collisionSize;
@@ -60,6 +61,7 @@ public class Sheepdog : MonoBehaviour
     public float InnerPressureMultiplier => innerPressureMultiplier;
     public bool IsPlaced => isPlaced;
     public bool IsMoving => hasMoveTarget;
+    public Vector2 CurrentVelocity => currentVelocity;
 
     // caches renderers and applies the starting placed state
     private void Awake()
@@ -91,6 +93,7 @@ public class Sheepdog : MonoBehaviour
     {
         if (!isPlaced || !hasMoveTarget)
         {
+            currentVelocity = Vector2.zero;
             return;
         }
 
@@ -100,6 +103,7 @@ public class Sheepdog : MonoBehaviour
         if (toTarget.magnitude <= stopDistance)
         {
             hasMoveTarget = false;
+            currentVelocity = Vector2.zero;
 
             if (rb != null)
             {
@@ -136,6 +140,8 @@ public class Sheepdog : MonoBehaviour
                 hasMoveTarget = safeDistance > stopDistance;
             }
         }
+
+        currentVelocity = (nextPosition - position) / Mathf.Max(Time.fixedDeltaTime, 0.0001f);
 
         if (rb != null)
         {
@@ -184,6 +190,7 @@ public class Sheepdog : MonoBehaviour
         transform.position = new Vector3(worldPosition.x, worldPosition.y, transform.position.z);
         moveTarget = worldPosition;
         hasMoveTarget = false;
+        currentVelocity = Vector2.zero;
 
         if (rb != null)
         {
