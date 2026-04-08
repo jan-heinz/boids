@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using UnityEngine;
@@ -13,9 +14,14 @@ public class BoidDebugPanel : MonoBehaviour
     public static float LogInterval { get; private set; } = 0.5f;
     public static bool LogFenceBehavior { get; private set; }
     public static bool LogBoidBehavior { get; private set; }
+    public static bool LogWolfBehavior { get; private set; }
     public static bool LogMovementState { get; private set; }
+    public static bool LogWolfMovementState { get; private set; }
     public static bool LogNeighborState { get; private set; }
     public static bool LogBoidSummary { get; private set; }
+    public static bool LogWolfTargetState { get; private set; }
+    public static bool LogWolfRetreatState { get; private set; }
+    public static bool LogWolfObstacleState { get; private set; }
     public static bool LogSeparationForce { get; private set; }
     public static bool LogAlignmentForce { get; private set; }
     public static bool LogCohesionForce { get; private set; }
@@ -82,8 +88,16 @@ public class BoidDebugPanel : MonoBehaviour
     private bool logBoidBehavior;
 
     [SerializeField]
+    [Tooltip("Whether wolf behavior logs should be written to the log file")]
+    private bool logWolfBehavior = true;
+
+    [SerializeField]
     [Tooltip("Whether movement values should be written to the log file")]
     private bool logMovementState;
+
+    [SerializeField]
+    [Tooltip("Whether wolf movement values should be written to the log file")]
+    private bool logWolfMovementState = true;
 
     [SerializeField]
     [Tooltip("Whether nearby flockmate counts should be written to the log file")]
@@ -92,6 +106,18 @@ public class BoidDebugPanel : MonoBehaviour
     [SerializeField]
     [Tooltip("Whether a compact boid summary should be written to the log file")]
     private bool logBoidSummary = true;
+
+    [SerializeField]
+    [Tooltip("Whether wolf target selection should be written to the log file")]
+    private bool logWolfTargetState = true;
+
+    [SerializeField]
+    [Tooltip("Whether wolf retreat values should be written to the log file")]
+    private bool logWolfRetreatState = true;
+
+    [SerializeField]
+    [Tooltip("Whether wolf obstacle response should be written to the log file")]
+    private bool logWolfObstacleState = true;
 
     [SerializeField]
     [Tooltip("Whether separation steering should be written to the log file")]
@@ -208,8 +234,9 @@ public class BoidDebugPanel : MonoBehaviour
     {
         bool hasFenceLogs = HasFenceLogsEnabled();
         bool hasBoidLogs = HasBoidLogsEnabled();
+        bool hasWolfLogs = HasWolfLogsEnabled();
 
-        if (!LoggingEnabled || (!hasFenceLogs && !hasBoidLogs))
+        if (!LoggingEnabled || (!hasFenceLogs && !hasBoidLogs && !hasWolfLogs))
         {
             return;
         }
@@ -269,6 +296,40 @@ public class BoidDebugPanel : MonoBehaviour
         {
             entry.AppendLine();
             entry.AppendLine($"  omitted sheep: {omittedSheepCount}");
+        }
+
+        if (hasWolfLogs)
+        {
+            IReadOnlyList<Wolf> wolves = Wolf.ActiveWolves;
+            int loggedWolfCount = 0;
+
+            for (int i = 0; i < wolves.Count; i++)
+            {
+                Wolf wolf = wolves[i];
+
+                if (wolf == null)
+                {
+                    continue;
+                }
+
+                if (loggedSheepCount > 0 || omittedSheepCount > 0 || loggedWolfCount > 0)
+                {
+                    entry.AppendLine();
+                }
+
+                wolf.AppendDebugLogEntry(entry, "  ");
+                loggedWolfCount++;
+            }
+
+            if (loggedWolfCount == 0)
+            {
+                if (loggedSheepCount > 0 || omittedSheepCount > 0)
+                {
+                    entry.AppendLine();
+                }
+
+                entry.AppendLine("  no wolves found");
+            }
         }
 
         AppendLogLine(entry.ToString().TrimEnd());
@@ -377,9 +438,14 @@ public class BoidDebugPanel : MonoBehaviour
     {
         logFenceBehavior = true;
         logBoidBehavior = true;
+        logWolfBehavior = true;
         logMovementState = true;
+        logWolfMovementState = true;
         logNeighborState = true;
         logBoidSummary = true;
+        logWolfTargetState = true;
+        logWolfRetreatState = true;
+        logWolfObstacleState = true;
         logSeparationForce = true;
         logAlignmentForce = true;
         logCohesionForce = true;
@@ -465,6 +531,20 @@ public class BoidDebugPanel : MonoBehaviour
 
         GUILayout.Space(8f);
 
+        logWolfBehavior = GUILayout.Toggle(logWolfBehavior, "log wolf behavior");
+
+        if (logWolfBehavior)
+        {
+            GUILayout.BeginVertical(GUI.skin.box);
+            logWolfMovementState = GUILayout.Toggle(logWolfMovementState, "log wolf movement state");
+            logWolfTargetState = GUILayout.Toggle(logWolfTargetState, "log wolf target state");
+            logWolfRetreatState = GUILayout.Toggle(logWolfRetreatState, "log wolf retreat state");
+            logWolfObstacleState = GUILayout.Toggle(logWolfObstacleState, "log wolf obstacle state");
+            GUILayout.EndVertical();
+        }
+
+        GUILayout.Space(8f);
+
         logOnlyActiveSheep = GUILayout.Toggle(logOnlyActiveSheep, "only log active sheep");
 
         GUILayout.EndScrollView();
@@ -487,9 +567,14 @@ public class BoidDebugPanel : MonoBehaviour
         LogInterval = Mathf.Max(0.1f, logInterval);
         LogFenceBehavior = logFenceBehavior;
         LogBoidBehavior = logBoidBehavior;
+        LogWolfBehavior = logWolfBehavior;
         LogMovementState = logMovementState;
+        LogWolfMovementState = logWolfMovementState;
         LogNeighborState = logNeighborState;
         LogBoidSummary = logBoidSummary;
+        LogWolfTargetState = logWolfTargetState;
+        LogWolfRetreatState = logWolfRetreatState;
+        LogWolfObstacleState = logWolfObstacleState;
         LogSeparationForce = logSeparationForce;
         LogAlignmentForce = logAlignmentForce;
         LogCohesionForce = logCohesionForce;
@@ -542,9 +627,14 @@ public class BoidDebugPanel : MonoBehaviour
             $"log interval = {LogInterval:0.00}\n" +
             $"log fence behavior = {LogFenceBehavior}\n" +
             $"log boid behavior = {LogBoidBehavior}\n" +
+            $"log wolf behavior = {LogWolfBehavior}\n" +
             $"log movement state = {LogMovementState}\n" +
+            $"log wolf movement state = {LogWolfMovementState}\n" +
             $"log neighbor state = {LogNeighborState}\n" +
             $"log boid summary = {LogBoidSummary}\n" +
+            $"log wolf target state = {LogWolfTargetState}\n" +
+            $"log wolf retreat state = {LogWolfRetreatState}\n" +
+            $"log wolf obstacle state = {LogWolfObstacleState}\n" +
             $"log separation force = {LogSeparationForce}\n" +
             $"log alignment force = {LogAlignmentForce}\n" +
             $"log cohesion force = {LogCohesionForce}\n" +
@@ -587,6 +677,16 @@ public class BoidDebugPanel : MonoBehaviour
                 || LogAlignmentForce
                 || LogCohesionForce
                 || LogBoidSteeringForce);
+    }
+
+    // checks whether any wolf log category is enabled
+    private bool HasWolfLogsEnabled()
+    {
+        return LogWolfBehavior
+            && (LogWolfMovementState
+                || LogWolfTargetState
+                || LogWolfRetreatState
+                || LogWolfObstacleState);
     }
 
     // checks whether this sheep should be included in the current filtered log sample

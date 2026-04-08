@@ -59,6 +59,11 @@ public class SheepAgent : MonoBehaviour
     public Vector2 CurrentVelocity => currentVelocity;
     public IReadOnlyList<SheepAgent> Neighbors => neighbors;
     public int NeighborCount => neighbors.Count;
+    public float CollisionRadius => sheepCollider != null
+        ? Mathf.Max(sheepCollider.bounds.extents.x, sheepCollider.bounds.extents.y)
+        : 0.5f;
+    public bool IsSafe => currentGoalArea != null;
+    public bool CanBeTargeted => isActiveAndEnabled && currentGoalArea == null;
 
     // lets a spawner choose the sheep's initial heading before play starts
     public void SetStartingDirection(Vector2 direction)
@@ -75,6 +80,12 @@ public class SheepAgent : MonoBehaviour
     public void SetFlockManager(FlockManager manager)
     {
         flockManager = manager;
+    }
+
+    // removes this sheep after a wolf catches it
+    public void BeEaten()
+    {
+        Destroy(gameObject);
     }
 
     // grabs the rigidbody used to move the sheep through the physics system

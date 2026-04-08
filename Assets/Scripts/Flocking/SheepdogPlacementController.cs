@@ -11,10 +11,6 @@ public class SheepdogPlacementController : MonoBehaviour
     private Sheepdog sheepdog;
 
     [SerializeField]
-    [Tooltip("Number key used to select this sheepdog")]
-    private KeyCode selectKey = KeyCode.Alpha1;
-
-    [SerializeField]
     [Tooltip("Label shown on the sheepdog card")]
     private string cardLabel = "1";
 
