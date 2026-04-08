@@ -6,6 +6,27 @@ public class Sheepdog : MonoBehaviour
 {
     // -------------------------------------------------------------------------------------------------------------
 
+    [Header("Identity")]
+    [SerializeField]
+    [Tooltip("Name shown above this sheepdog and on its card")]
+    private string sheepdogName = "Dog";
+
+    [SerializeField]
+    [Tooltip("Local offset used by the sheepdog name tag")]
+    private Vector3 nameTagOffset = new(0f, 1.1f, -0.1f);
+
+    [SerializeField, Min(1)]
+    [Tooltip("Font size used by the sheepdog name tag")]
+    private int nameTagFontSize = 36;
+
+    [SerializeField, Min(0.01f)]
+    [Tooltip("World size used by the sheepdog name tag")]
+    private float nameTagCharacterSize = 0.08f;
+
+    [SerializeField]
+    [Tooltip("Color used by the sheepdog name tag")]
+    private Color nameTagColor = Color.white;
+
     [Header("Placement")]
     [SerializeField]
     [Tooltip("Whether the sheepdog starts placed when play begins")]
@@ -52,8 +73,10 @@ public class Sheepdog : MonoBehaviour
     private bool hasMoveTarget;
     private Vector2 moveTarget;
     private Vector2 currentVelocity;
+    private TextMesh nameTag;
 
     public static IReadOnlyList<Sheepdog> ActiveSheepdogs => activeSheepdogs;
+    public string DisplayName => string.IsNullOrWhiteSpace(sheepdogName) ? gameObject.name : sheepdogName;
     public float CollisionSize => collisionSize;
     public float InfluenceRadius => influenceRadius;
     public float InnerRadius => innerRadius;
@@ -66,6 +89,7 @@ public class Sheepdog : MonoBehaviour
     // caches renderers and applies the starting placed state
     private void Awake()
     {
+        EnsureNameTag();
         cachedRenderers = GetComponentsInChildren<Renderer>(true);
         blockingCollider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
@@ -170,6 +194,11 @@ public class Sheepdog : MonoBehaviour
     // keeps the pressure radii in a valid range after inspector edits
     private void OnValidate()
     {
+        if (string.IsNullOrWhiteSpace(sheepdogName))
+        {
+            sheepdogName = "Dog";
+        }
+
         collisionSize = Mathf.Max(0f, collisionSize);
         moveSpeed = Mathf.Max(0f, moveSpeed);
         stopDistance = Mathf.Max(0f, stopDistance);
@@ -181,6 +210,12 @@ public class Sheepdog : MonoBehaviour
         if (blockingCollider != null)
         {
             UpdateBlockingCollider();
+        }
+
+        if (nameTag != null)
+        {
+            ApplyNameTagSettings();
+            UpdateNameTag();
         }
     }
 
@@ -265,6 +300,66 @@ public class Sheepdog : MonoBehaviour
         }
 
         blockingCollider.size = Vector2.one * collisionSize;
+    }
+
+    // creates the runtime text mesh used for the sheepdog name
+    private void EnsureNameTag()
+    {
+        nameTag = GetComponentInChildren<TextMesh>();
+
+        if (nameTag == null)
+        {
+            GameObject nameTagObject = new("Name Tag");
+            nameTagObject.transform.SetParent(transform, false);
+            nameTag = nameTagObject.AddComponent<TextMesh>();
+        }
+
+        ApplyNameTagSettings();
+        UpdateNameTag();
+    }
+
+    // keeps the name tag synced with the inspector settings
+    private void ApplyNameTagSettings()
+    {
+        if (nameTag == null)
+        {
+            return;
+        }
+
+        if (GameFonts.Regular != null)
+        {
+            nameTag.font = GameFonts.Regular;
+        }
+
+        nameTag.transform.localPosition = nameTagOffset;
+        nameTag.anchor = TextAnchor.MiddleCenter;
+        nameTag.alignment = TextAlignment.Center;
+        nameTag.fontSize = nameTagFontSize;
+        nameTag.characterSize = nameTagCharacterSize;
+        nameTag.color = nameTagColor;
+
+        MeshRenderer nameTagRenderer = nameTag.GetComponent<MeshRenderer>();
+
+        if (nameTagRenderer != null)
+        {
+            if (nameTag.font != null)
+            {
+                nameTagRenderer.sharedMaterial = nameTag.font.material;
+            }
+
+            nameTagRenderer.sortingOrder = 20;
+        }
+    }
+
+    // updates the visible sheepdog name
+    private void UpdateNameTag()
+    {
+        if (nameTag == null)
+        {
+            return;
+        }
+
+        nameTag.text = DisplayName;
     }
 
     // draws the pressure ranges while tuning in the editor

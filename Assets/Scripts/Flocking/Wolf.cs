@@ -6,10 +6,16 @@ using System.Text;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Wolf : MonoBehaviour
 {
+    public enum VisualState
+    {
+        Stalk,
+        Commit,
+        Retreat
+    }
+
     private enum WolfState
     {
         Stalk,
-        Lunge,
         Commit,
         Retreat
     }
@@ -49,6 +55,14 @@ public class Wolf : MonoBehaviour
     private float stalkDirectionChangeInterval = 1.6f;
 
     [SerializeField, Min(0f)]
+    [Tooltip("How long the wolf should move before pausing during stalking")]
+    private float stalkMoveDuration = 0.65f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How long the wolf should pause between stalking moves")]
+    private float stalkHoldDuration = 1.1f;
+
+    [SerializeField, Min(0f)]
     [Tooltip("How far ahead the wolf aims around the flock while stalking")]
     private float stalkLeadDistance = 3f;
 
@@ -82,6 +96,10 @@ public class Wolf : MonoBehaviour
     private float eatCooldown = 3f;
 
     [SerializeField, Min(0f)]
+    [Tooltip("How long the wolf pauses in place after eating before retreating")]
+    private float postEatHoldDuration = 0.8f;
+
+    [SerializeField, Min(0f)]
     [Tooltip("How often the wolf should reevaluate its target")]
     private float retargetInterval = 0.35f;
 
@@ -104,23 +122,6 @@ public class Wolf : MonoBehaviour
     [SerializeField, Min(0f)]
     [Tooltip("How close the wolf gets before it stops using the outside approach")]
     private float commitDirectChaseDistance = 2f;
-
-    [Header("Lunge")]
-    [SerializeField, Range(0f, 1f)]
-    [Tooltip("Chance the wolf will lunge while stalking instead of committing normally")]
-    private float lungeChance = 0.3f;
-
-    [SerializeField, Min(0f)]
-    [Tooltip("How far the wolf lunges forward to disrupt the flock")]
-    private float lungeDistance = 2.5f;
-
-    [SerializeField, Min(1f)]
-    [Tooltip("How much faster the wolf moves during a lunge")]
-    private float lungeSpeedMultiplier = 1.75f;
-
-    [SerializeField, Min(0f)]
-    [Tooltip("How long the wolf must wait before it can lunge again")]
-    private float lungeCooldown = 2f;
 
     [Header("Targeting")]
     [SerializeField]
@@ -169,11 +170,11 @@ public class Wolf : MonoBehaviour
     private Collider2D wolfCollider;
     private TextMesh stateLabel;
     private WolfState state;
+    private Vector2 currentVelocity;
     private SheepAgent targetSheep;
     private Vector2 retreatTarget;
-    private Vector2 lungeTarget;
     private float cooldownTimer;
-    private float lungeCooldownTimer;
+    private float postEatHoldTimer;
     private float stateTimer;
     private float nextAttackTime;
     private float stalkDirectionTimer;
@@ -194,6 +195,14 @@ public class Wolf : MonoBehaviour
     private float stalkOrbitDirection = 1f;
 
     public static IReadOnlyList<Wolf> ActiveWolves => activeWolves;
+    public Vector2 CurrentVelocity => currentVelocity;
+    public VisualState CurrentVisualState => state switch
+    {
+        WolfState.Stalk => VisualState.Stalk,
+        WolfState.Commit => VisualState.Commit,
+        WolfState.Retreat => VisualState.Retreat,
+        _ => VisualState.Stalk
+    };
 
     // caches references and sets up the wolf rigidbody
     private void Awake()
@@ -268,8 +277,9 @@ public class Wolf : MonoBehaviour
         }
 
         ResetDebugState();
+        currentVelocity = Vector2.zero;
         cooldownTimer = Mathf.Max(0f, cooldownTimer - Time.fixedDeltaTime);
-        lungeCooldownTimer = Mathf.Max(0f, lungeCooldownTimer - Time.fixedDeltaTime);
+        postEatHoldTimer = Mathf.Max(0f, postEatHoldTimer - Time.fixedDeltaTime);
         retargetTimer -= Time.fixedDeltaTime;
         stalkDirectionTimer -= Time.fixedDeltaTime;
         stateTimer += Time.fixedDeltaTime;
@@ -285,10 +295,6 @@ public class Wolf : MonoBehaviour
         {
             case WolfState.Stalk:
                 TickStalk();
-                break;
-
-            case WolfState.Lunge:
-                TickLunge();
                 break;
 
             case WolfState.Commit:
@@ -312,6 +318,8 @@ public class Wolf : MonoBehaviour
         }
 
         UpdateStalkDirection();
+        Vector2 stalkPoint = GetStalkPoint(flockCenter);
+        bool shouldMove = ShouldMoveDuringStalk();
 
         if (retargetTimer <= 0f || !IsValidTarget(targetSheep))
         {
@@ -323,7 +331,10 @@ public class Wolf : MonoBehaviour
         {
             if (stateTimer < nextAttackTime)
             {
-                MoveTowards(GetStalkPoint(flockCenter));
+                if (shouldMove)
+                {
+                    MoveTowards(stalkPoint);
+                }
                 return;
             }
 
@@ -339,41 +350,10 @@ public class Wolf : MonoBehaviour
             }
         }
 
-        MoveTowards(GetStalkPoint(flockCenter));
-    }
-
-    // makes a short aggressive burst into the flock before picking the cleanest follow-up target
-    private void TickLunge()
-    {
-        if (IsSheepdogThreatening())
+        if (shouldMove)
         {
-            EnterRetreatState();
-            return;
+            MoveTowards(stalkPoint);
         }
-
-        if (Vector2.Distance(rb.position, lungeTarget) > arrivalDistance)
-        {
-            MoveTowards(lungeTarget, true, lungeSpeedMultiplier);
-            return;
-        }
-
-        if (!TryGetFlockCenter(out Vector2 flockCenter))
-        {
-            EnterStalkState();
-            return;
-        }
-
-        targetSheep = FindMostSplitTarget(flockCenter);
-
-        if (IsValidTarget(targetSheep))
-        {
-            state = WolfState.Commit;
-            stateTimer = 0f;
-            TickCommit();
-            return;
-        }
-
-        EnterStalkState();
     }
 
     // chases the chosen sheep and eats it if it gets close enough
@@ -420,6 +400,12 @@ public class Wolf : MonoBehaviour
             return;
         }
 
+        if (postEatHoldTimer > 0f)
+        {
+            lastHoldingRetreatPosition = true;
+            return;
+        }
+
         if (stuckTime >= 0.2f)
         {
             lastHoldingRetreatPosition = true;
@@ -459,40 +445,6 @@ public class Wolf : MonoBehaviour
             }
 
             float score = GetTargetScore(candidate, flockCenter);
-
-            if (score <= bestScore)
-            {
-                continue;
-            }
-
-            bestScore = score;
-            bestSheep = candidate;
-        }
-
-        return bestSheep;
-    }
-
-    // picks the sheep that got pushed furthest out of formation after a lunge
-    private SheepAgent FindMostSplitTarget(Vector2 flockCenter)
-    {
-        IReadOnlyList<SheepAgent> sheep = flockManager.Sheep;
-        SheepAgent bestSheep = null;
-        float bestScore = float.MinValue;
-
-        for (int i = 0; i < sheep.Count; i++)
-        {
-            SheepAgent candidate = sheep[i];
-
-            if (!IsValidTarget(candidate))
-            {
-                continue;
-            }
-
-            Vector2 sheepPosition = candidate.transform.position;
-            float score =
-                (Vector2.Distance(sheepPosition, flockCenter) * 1.5f) -
-                (candidate.NeighborCount * 1.25f) -
-                (Vector2.Distance(rb.position, sheepPosition) * 0.03f);
 
             if (score <= bestScore)
             {
@@ -630,49 +582,22 @@ public class Wolf : MonoBehaviour
         stalkDirectionTimer = stalkDirectionChangeInterval;
     }
 
-    // decides whether the wolf should try to break up the flock before choosing a victim
-    private bool ShouldStartLunge(Vector2 flockCenter)
+    // alternates between repositioning and holding so stalking feels patient
+    private bool ShouldMoveDuringStalk()
     {
-        if (lungeChance <= 0f
-            || lungeDistance <= 0f
-            || lungeCooldownTimer > 0f
-            || !IsValidTarget(targetSheep)
-            || !HasLungeOpportunity())
+        float cycleDuration = stalkMoveDuration + stalkHoldDuration;
+
+        if (cycleDuration <= 0f)
+        {
+            return true;
+        }
+
+        if (stalkMoveDuration <= 0f)
         {
             return false;
         }
 
-        Vector2 toFlock = flockCenter - rb.position;
-
-        if (toFlock.sqrMagnitude <= 0.0001f)
-        {
-            return false;
-        }
-
-        return Random.value < lungeChance;
-    }
-
-    // checks whether the flock is packed enough for a lunge to matter
-    private bool HasLungeOpportunity()
-    {
-        IReadOnlyList<SheepAgent> sheep = flockManager.Sheep;
-
-        for (int i = 0; i < sheep.Count; i++)
-        {
-            SheepAgent candidate = sheep[i];
-
-            if (!IsValidTarget(candidate))
-            {
-                continue;
-            }
-
-            if (candidate.NeighborCount >= 2)
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return Mathf.Repeat(stateTimer, cycleDuration) < stalkMoveDuration;
     }
 
     // sends the wolf away from the herd or nearby sheepdogs
@@ -691,39 +616,6 @@ public class Wolf : MonoBehaviour
         }
 
         return GetBestRetreatPoint(preferredDirection.normalized);
-    }
-
-    // picks a short reachable burst point toward the flock
-    private Vector2 GetLungePoint(Vector2 lungeDirection)
-    {
-        if (lungeDirection.sqrMagnitude <= 0.0001f)
-        {
-            return rb.position;
-        }
-
-        Vector2 normalizedDirection = lungeDirection.normalized;
-        Vector2 fallbackTarget = rb.position + (normalizedDirection * lungeDistance);
-
-        if (obstacleLayers.value == 0)
-        {
-            return fallbackTarget;
-        }
-
-        RaycastHit2D hit = Physics2D.CircleCast(
-            rb.position,
-            collisionRadius,
-            normalizedDirection,
-            lungeDistance,
-            obstacleLayers
-        );
-
-        if (hit.collider == null)
-        {
-            return fallbackTarget;
-        }
-
-        float safeDistance = Mathf.Max(0f, hit.distance - collisionRadius - 0.1f);
-        return rb.position + (normalizedDirection * safeDistance);
     }
 
     // keeps the retreat target a little inside the pasture if a fence is in the way
@@ -953,6 +845,7 @@ public class Wolf : MonoBehaviour
             }
         }
 
+        currentVelocity = moveDelta / Time.fixedDeltaTime;
         rb.MovePosition(nextPosition);
     }
 
@@ -1131,6 +1024,7 @@ public class Wolf : MonoBehaviour
         sheep.BeEaten();
         targetSheep = null;
         cooldownTimer = eatCooldown;
+        postEatHoldTimer = postEatHoldDuration;
         EnterRetreatState();
         return true;
     }
@@ -1168,25 +1062,6 @@ public class Wolf : MonoBehaviour
         targetSheep = null;
     }
 
-    // begins a short burst toward the flock before choosing a victim
-    private void EnterLungeState(Vector2 flockCenter)
-    {
-        state = WolfState.Lunge;
-        stateTimer = 0f;
-        lungeCooldownTimer = lungeCooldown;
-        Vector2 lungeDirection = IsValidTarget(targetSheep)
-            ? (Vector2)targetSheep.transform.position - rb.position
-            : flockCenter - rb.position;
-
-        if (lungeDirection.sqrMagnitude <= 0.0001f)
-        {
-            lungeDirection = flockCenter - rb.position;
-        }
-
-        lungeTarget = GetLungePoint(lungeDirection);
-        targetSheep = null;
-    }
-
     // creates a small text label over the wolf for quick state reading
     private void EnsureStateLabel()
     {
@@ -1211,6 +1086,11 @@ public class Wolf : MonoBehaviour
             return;
         }
 
+        if (GameFonts.Bold != null)
+        {
+            stateLabel.font = GameFonts.Bold;
+        }
+
         stateLabel.transform.localPosition = stateLabelOffset;
         stateLabel.anchor = TextAnchor.MiddleCenter;
         stateLabel.alignment = TextAlignment.Center;
@@ -1223,6 +1103,11 @@ public class Wolf : MonoBehaviour
         if (labelRenderer == null)
         {
             return;
+        }
+
+        if (stateLabel.font != null)
+        {
+            labelRenderer.sharedMaterial = stateLabel.font.material;
         }
 
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
@@ -1245,7 +1130,6 @@ public class Wolf : MonoBehaviour
         stateLabel.text = state switch
         {
             WolfState.Stalk => "S",
-            WolfState.Lunge => "L",
             WolfState.Commit => "C",
             WolfState.Retreat => "R",
             _ => "?"
@@ -1282,7 +1166,6 @@ public class Wolf : MonoBehaviour
             entry.AppendLine($"{indent}    sheepdog threat: {lastSheepdogThreatening}");
             entry.AppendLine($"{indent}    state time: {stateTimer:0.00}");
             entry.AppendLine($"{indent}    attack time: {nextAttackTime:0.00}");
-            entry.AppendLine($"{indent}    lunge cooldown: {lungeCooldownTimer:0.00}");
         }
 
         if (BoidDebugPanel.LogWolfBehavior && BoidDebugPanel.LogWolfRetreatState)

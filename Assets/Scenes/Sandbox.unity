@@ -246,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelObjective
   goalArea: {fileID: 55072537}
   levelDuration: 60
-  requiredSafePercent: 0.8
   pauseOnEnd: 1
   hudFontSize: 28
   resultFontSize: 56

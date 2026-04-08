@@ -39,6 +39,7 @@ public class GoalScoreDisplay : MonoBehaviour
         scoreStyle = new GUIStyle();
         scoreStyle.alignment = TextAnchor.MiddleCenter;
         scoreStyle.fontSize = fontSize;
+        scoreStyle.font = GameFonts.Bold;
         scoreStyle.normal.textColor = textColor;
     }
 
