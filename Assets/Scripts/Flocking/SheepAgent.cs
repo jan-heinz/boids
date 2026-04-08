@@ -27,6 +27,15 @@ public class SheepAgent : MonoBehaviour
     [Tooltip("Layers this sheep should treat as obstacles")]
     private LayerMask obstacleLayers;
 
+    [Header("Predator Avoidance")]
+    [SerializeField, Min(0f)]
+    [Tooltip("How far away wolves start to scare this sheep")]
+    private float wolfAvoidRadius = 4.5f;
+
+    [SerializeField]
+    [Tooltip("How strongly nearby wolves push this sheep away")]
+    private float wolfAvoidWeight = 2f;
+
     private Vector2 currentVelocity;
     private readonly List<SheepAgent> neighbors = new();
     private Rigidbody2D rb;
@@ -40,6 +49,7 @@ public class SheepAgent : MonoBehaviour
     private Vector2 lastAlignmentForce;
     private Vector2 lastCohesionForce;
     private Vector2 lastBoidSteeringForce;
+    private Vector2 lastWolfForce;
     private Vector2 lastPosition;
     private float stuckTime;
     private float lastMovedDistance;
@@ -164,6 +174,7 @@ public class SheepAgent : MonoBehaviour
         Vector2 alignmentForce = neighbors.Count > 0 ? ComputeAlignmentForce() : Vector2.zero;
         Vector2 cohesionForce = neighbors.Count > 0 ? ComputeCohesionForce() : Vector2.zero;
         Vector2 sheepdogForce = ComputeSheepdogForce();
+        Vector2 wolfForce = ComputeWolfForce();
         Vector2 totalForce = separationForce + alignmentForce + cohesionForce;
         Vector2 rawTotalForce = totalForce;
         float totalComponentMagnitude =
@@ -172,7 +183,7 @@ public class SheepAgent : MonoBehaviour
             cohesionForce.magnitude;
         float maxSteeringStep = settings.MaxSteeringForce * Time.fixedDeltaTime;
         Vector2 startingVelocity = currentVelocity;
-        Vector2 combinedForce = totalForce + sheepdogForce;
+        Vector2 combinedForce = totalForce + sheepdogForce + wolfForce;
 
         if (combinedForce.sqrMagnitude <= 0.0001f)
         {
@@ -186,6 +197,7 @@ public class SheepAgent : MonoBehaviour
             alignmentForce *= scale;
             cohesionForce *= scale;
             sheepdogForce *= scale;
+            wolfForce *= scale;
             totalForce *= scale;
             combinedForce *= scale;
         }
@@ -196,6 +208,7 @@ public class SheepAgent : MonoBehaviour
         lastAlignmentForce = alignmentForce;
         lastCohesionForce = cohesionForce;
         lastBoidSteeringForce = totalForce;
+        lastWolfForce = wolfForce;
         currentVelocity += combinedForce;
     }
 
@@ -341,6 +354,55 @@ public class SheepAgent : MonoBehaviour
         return (desiredVelocity - currentVelocity) * pressureDirection.magnitude;
     }
 
+    // pushes sheep away from nearby wolves before they can get eaten
+    private Vector2 ComputeWolfForce()
+    {
+        IReadOnlyList<Wolf> wolves = Wolf.ActiveWolves;
+
+        if (wolves.Count == 0 || wolfAvoidRadius <= 0f || wolfAvoidWeight <= 0f)
+        {
+            return Vector2.zero;
+        }
+
+        Vector2 panicDirection = Vector2.zero;
+        Vector2 position = rb.position;
+
+        for (int i = 0; i < wolves.Count; i++)
+        {
+            Wolf wolf = wolves[i];
+
+            if (wolf == null)
+            {
+                continue;
+            }
+
+            Vector2 awayFromWolf = position - (Vector2)wolf.transform.position;
+            float distance = awayFromWolf.magnitude;
+
+            if (distance > wolfAvoidRadius)
+            {
+                continue;
+            }
+
+            if (distance <= 0.0001f)
+            {
+                awayFromWolf = GetEmergencyScatterDirection();
+                distance = 0f;
+            }
+
+            float pressure = 1f - Mathf.Clamp01(distance / wolfAvoidRadius);
+            panicDirection += awayFromWolf.normalized * (pressure * pressure + pressure);
+        }
+
+        if (panicDirection.sqrMagnitude <= 0.0001f)
+        {
+            return Vector2.zero;
+        }
+
+        Vector2 desiredVelocity = panicDirection.normalized * settings.MoveSpeed;
+        return (desiredVelocity - currentVelocity) * (wolfAvoidWeight * panicDirection.magnitude);
+    }
+
     // settles sheep down after they reach the goal area
     private void ApplyGoalAreaBehavior()
     {
@@ -427,6 +489,7 @@ public class SheepAgent : MonoBehaviour
         lastAlignmentForce = Vector2.zero;
         lastCohesionForce = Vector2.zero;
         lastBoidSteeringForce = Vector2.zero;
+        lastWolfForce = Vector2.zero;
     }
 
     // predicts fence hits ahead of the sheep and redirects movement before contact
@@ -798,6 +861,7 @@ public class SheepAgent : MonoBehaviour
         if (BoidDebugPanel.LogBoidBehavior && BoidDebugPanel.LogBoidSteeringForce)
         {
             entry.AppendLine($"{indent}    boid steering force: {FormatVector(lastBoidSteeringForce)}");
+            entry.AppendLine($"{indent}    wolf force: {FormatVector(lastWolfForce)}");
         }
     }
 
@@ -825,7 +889,8 @@ public class SheepAgent : MonoBehaviour
             || lastSeparationForce.sqrMagnitude > 0.0001f
             || lastAlignmentForce.sqrMagnitude > 0.0001f
             || lastCohesionForce.sqrMagnitude > 0.0001f
-            || lastBoidSteeringForce.sqrMagnitude > 0.0001f;
+            || lastBoidSteeringForce.sqrMagnitude > 0.0001f
+            || lastWolfForce.sqrMagnitude > 0.0001f;
     }
 
     // formats a cast hit for debug output

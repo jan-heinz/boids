@@ -9,6 +9,7 @@ public class Wolf : MonoBehaviour
     private enum WolfState
     {
         Stalk,
+        Lunge,
         Commit,
         Retreat
     }
@@ -40,8 +41,28 @@ public class Wolf : MonoBehaviour
     private float stalkDistance = 5f;
 
     [SerializeField, Min(0f)]
+    [Tooltip("How much room the wolf has to drift inward or outward while stalking")]
+    private float stalkBand = 1.2f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How often the wolf changes stalking direction around the flock")]
+    private float stalkDirectionChangeInterval = 1.6f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How far ahead the wolf aims around the flock while stalking")]
+    private float stalkLeadDistance = 3f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How much extra fence margin the wolf keeps while stalking")]
+    private float stalkFencePadding = 0.35f;
+
+    [SerializeField, Min(0f)]
     [Tooltip("How far the wolf backs off after eating or when pushed away")]
     private float retreatDistance = 6f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How much extra fence margin the wolf keeps while retreating")]
+    private float retreatFencePadding = 0.6f;
 
     [SerializeField, Min(0f)]
     [Tooltip("How close the wolf needs to get before it considers a move point reached")]
@@ -64,9 +85,42 @@ public class Wolf : MonoBehaviour
     [Tooltip("How often the wolf should reevaluate its target")]
     private float retargetInterval = 0.35f;
 
+    [SerializeField, Min(0f)]
+    [Tooltip("Minimum time the wolf should visibly stalk before it can attack again")]
+    private float stalkDurationMin = 5f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("Maximum time the wolf should visibly stalk before it can attack again")]
+    private float stalkDurationMax = 20f;
+
     [SerializeField]
     [Tooltip("Minimum target score needed before the wolf commits")]
     private float commitThreshold = -0.25f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How far outside the flock the wolf aims before closing in on a target")]
+    private float commitApproachOffset = 1.6f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How close the wolf gets before it stops using the outside approach")]
+    private float commitDirectChaseDistance = 2f;
+
+    [Header("Lunge")]
+    [SerializeField, Range(0f, 1f)]
+    [Tooltip("Chance the wolf will lunge while stalking instead of committing normally")]
+    private float lungeChance = 0.3f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How far the wolf lunges forward to disrupt the flock")]
+    private float lungeDistance = 2.5f;
+
+    [SerializeField, Min(1f)]
+    [Tooltip("How much faster the wolf moves during a lunge")]
+    private float lungeSpeedMultiplier = 1.75f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How long the wolf must wait before it can lunge again")]
+    private float lungeCooldown = 2f;
 
     [Header("Targeting")]
     [SerializeField]
@@ -94,12 +148,35 @@ public class Wolf : MonoBehaviour
     [Tooltip("How strongly nearby sheepdogs push the wolf away")]
     private float sheepdogAvoidWeight = 2f;
 
+    [Header("State Label")]
+    [SerializeField]
+    [Tooltip("Local offset for the wolf state label")]
+    private Vector3 stateLabelOffset = new(0f, 0f, -0.1f);
+
+    [SerializeField, Min(1)]
+    [Tooltip("Font size used by the wolf state label")]
+    private int stateLabelFontSize = 48;
+
+    [SerializeField, Min(0.01f)]
+    [Tooltip("Character size used by the wolf state label")]
+    private float stateLabelCharacterSize = 0.12f;
+
+    [SerializeField]
+    [Tooltip("Color used by the wolf state label")]
+    private Color stateLabelColor = Color.white;
+
     private Rigidbody2D rb;
     private Collider2D wolfCollider;
+    private TextMesh stateLabel;
     private WolfState state;
     private SheepAgent targetSheep;
     private Vector2 retreatTarget;
+    private Vector2 lungeTarget;
     private float cooldownTimer;
+    private float lungeCooldownTimer;
+    private float stateTimer;
+    private float nextAttackTime;
+    private float stalkDirectionTimer;
     private float retargetTimer;
     private Vector2 lastPosition;
     private float stuckTime;
@@ -114,6 +191,7 @@ public class Wolf : MonoBehaviour
     private bool lastRetreatTargetAdjusted;
     private bool lastHoldingRetreatPosition;
     private bool lastSheepdogThreatening;
+    private float stalkOrbitDirection = 1f;
 
     public static IReadOnlyList<Wolf> ActiveWolves => activeWolves;
 
@@ -141,7 +219,8 @@ public class Wolf : MonoBehaviour
         rb.gravityScale = 0f;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        state = WolfState.Stalk;
+        EnsureStateLabel();
+        EnterStalkState();
         lastPosition = rb.position;
     }
 
@@ -165,10 +244,18 @@ public class Wolf : MonoBehaviour
     {
         collisionRadius = Mathf.Max(0.05f, collisionRadius);
         obstacleCheckDistance = Mathf.Max(0f, obstacleCheckDistance);
+        stalkDurationMin = Mathf.Max(0f, stalkDurationMin);
+        stalkDurationMax = Mathf.Max(stalkDurationMin, stalkDurationMax);
 
         if (wolfCollider is CircleCollider2D circleCollider)
         {
             circleCollider.radius = collisionRadius;
+        }
+
+        if (stateLabel != null)
+        {
+            ApplyStateLabelSettings();
+            UpdateStateLabel();
         }
     }
 
@@ -182,7 +269,10 @@ public class Wolf : MonoBehaviour
 
         ResetDebugState();
         cooldownTimer = Mathf.Max(0f, cooldownTimer - Time.fixedDeltaTime);
+        lungeCooldownTimer = Mathf.Max(0f, lungeCooldownTimer - Time.fixedDeltaTime);
         retargetTimer -= Time.fixedDeltaTime;
+        stalkDirectionTimer -= Time.fixedDeltaTime;
+        stateTimer += Time.fixedDeltaTime;
         UpdateStuckState();
         lastSheepdogThreatening = IsSheepdogThreatening();
 
@@ -197,6 +287,10 @@ public class Wolf : MonoBehaviour
                 TickStalk();
                 break;
 
+            case WolfState.Lunge:
+                TickLunge();
+                break;
+
             case WolfState.Commit:
                 TickCommit();
                 break;
@@ -205,6 +299,8 @@ public class Wolf : MonoBehaviour
                 TickRetreat();
                 break;
         }
+
+        UpdateStateLabel();
     }
 
     // circles outside the flock until a weak target appears
@@ -215,6 +311,8 @@ public class Wolf : MonoBehaviour
             return;
         }
 
+        UpdateStalkDirection();
+
         if (retargetTimer <= 0f || !IsValidTarget(targetSheep))
         {
             targetSheep = FindBestTarget(flockCenter);
@@ -223,18 +321,59 @@ public class Wolf : MonoBehaviour
 
         if (cooldownTimer <= 0f && IsValidTarget(targetSheep))
         {
+            if (stateTimer < nextAttackTime)
+            {
+                MoveTowards(GetStalkPoint(flockCenter));
+                return;
+            }
+
             float targetScore = GetTargetScore(targetSheep, flockCenter);
             lastTargetScore = targetScore;
 
             if (targetScore >= commitThreshold)
             {
                 state = WolfState.Commit;
+                stateTimer = 0f;
                 TickCommit();
                 return;
             }
         }
 
         MoveTowards(GetStalkPoint(flockCenter));
+    }
+
+    // makes a short aggressive burst into the flock before picking the cleanest follow-up target
+    private void TickLunge()
+    {
+        if (IsSheepdogThreatening())
+        {
+            EnterRetreatState();
+            return;
+        }
+
+        if (Vector2.Distance(rb.position, lungeTarget) > arrivalDistance)
+        {
+            MoveTowards(lungeTarget, true, lungeSpeedMultiplier);
+            return;
+        }
+
+        if (!TryGetFlockCenter(out Vector2 flockCenter))
+        {
+            EnterStalkState();
+            return;
+        }
+
+        targetSheep = FindMostSplitTarget(flockCenter);
+
+        if (IsValidTarget(targetSheep))
+        {
+            state = WolfState.Commit;
+            stateTimer = 0f;
+            TickCommit();
+            return;
+        }
+
+        EnterStalkState();
     }
 
     // chases the chosen sheep and eats it if it gets close enough
@@ -248,7 +387,7 @@ public class Wolf : MonoBehaviour
 
         if (!IsValidTarget(targetSheep))
         {
-            state = WolfState.Stalk;
+            EnterStalkState();
             return;
         }
 
@@ -266,8 +405,10 @@ public class Wolf : MonoBehaviour
             return;
         }
 
-        lastTargetScore = GetTargetScore(targetSheep, flockManager != null && TryGetFlockCenter(out Vector2 flockCenter) ? flockCenter : rb.position);
-        MoveTowards(targetPosition);
+        Vector2 flockCenter = rb.position;
+        bool hasFlockCenter = flockManager != null && TryGetFlockCenter(out flockCenter);
+        lastTargetScore = GetTargetScore(targetSheep, hasFlockCenter ? flockCenter : rb.position);
+        MoveTowards(hasFlockCenter ? GetCommitPoint(targetSheep, flockCenter) : targetPosition);
     }
 
     // backs away from danger or after a successful attack
@@ -275,7 +416,7 @@ public class Wolf : MonoBehaviour
     {
         if (cooldownTimer <= 0f && !lastSheepdogThreatening)
         {
-            state = WolfState.Stalk;
+            EnterStalkState();
             return;
         }
 
@@ -298,7 +439,7 @@ public class Wolf : MonoBehaviour
             return;
         }
 
-        state = WolfState.Stalk;
+        EnterStalkState();
     }
 
     // picks the sheep that looks easiest to punish
@@ -318,6 +459,40 @@ public class Wolf : MonoBehaviour
             }
 
             float score = GetTargetScore(candidate, flockCenter);
+
+            if (score <= bestScore)
+            {
+                continue;
+            }
+
+            bestScore = score;
+            bestSheep = candidate;
+        }
+
+        return bestSheep;
+    }
+
+    // picks the sheep that got pushed furthest out of formation after a lunge
+    private SheepAgent FindMostSplitTarget(Vector2 flockCenter)
+    {
+        IReadOnlyList<SheepAgent> sheep = flockManager.Sheep;
+        SheepAgent bestSheep = null;
+        float bestScore = float.MinValue;
+
+        for (int i = 0; i < sheep.Count; i++)
+        {
+            SheepAgent candidate = sheep[i];
+
+            if (!IsValidTarget(candidate))
+            {
+                continue;
+            }
+
+            Vector2 sheepPosition = candidate.transform.position;
+            float score =
+                (Vector2.Distance(sheepPosition, flockCenter) * 1.5f) -
+                (candidate.NeighborCount * 1.25f) -
+                (Vector2.Distance(rb.position, sheepPosition) * 0.03f);
 
             if (score <= bestScore)
             {
@@ -386,26 +561,169 @@ public class Wolf : MonoBehaviour
             awayFromCenter = Vector2.left;
         }
 
-        return flockCenter + (awayFromCenter.normalized * stalkDistance);
+        float currentDistance = awayFromCenter.magnitude;
+        Vector2 radial = awayFromCenter / currentDistance;
+        Vector2 tangent = new(-radial.y, radial.x);
+        tangent *= stalkOrbitDirection;
+
+        float innerBand = Mathf.Max(0.1f, stalkDistance - stalkBand);
+        float outerBand = stalkDistance + stalkBand;
+
+        if (currentDistance < innerBand)
+        {
+            Vector2 escapeDirection = ((radial * 1.8f) + (tangent * 0.6f)).normalized;
+            return flockCenter + (escapeDirection * outerBand);
+        }
+
+        if (currentDistance > outerBand)
+        {
+            Vector2 returnDirection = ((-radial * 0.65f) + (tangent * 1f)).normalized;
+            return rb.position + (returnDirection * Mathf.Min(currentDistance - stalkDistance, 2f));
+        }
+
+        Vector2 ringPoint = flockCenter + (radial * stalkDistance);
+        Vector2 idealPoint = ringPoint + (tangent * stalkLeadDistance);
+        return GetFenceSafeTravelPoint(idealPoint, stalkFencePadding);
+    }
+
+    // approaches a target from the outside of the flock before closing in to bite
+    private Vector2 GetCommitPoint(SheepAgent sheep, Vector2 flockCenter)
+    {
+        Vector2 sheepPosition = sheep.transform.position;
+
+        if (Vector2.Distance(rb.position, sheepPosition) <= commitDirectChaseDistance)
+        {
+            return sheepPosition;
+        }
+
+        Vector2 outsideDirection = sheepPosition - flockCenter;
+
+        if (outsideDirection.sqrMagnitude <= 0.0001f)
+        {
+            outsideDirection = sheepPosition - rb.position;
+        }
+
+        if (outsideDirection.sqrMagnitude <= 0.0001f)
+        {
+            return sheepPosition;
+        }
+
+        Vector2 approachPoint = sheepPosition + (outsideDirection.normalized * commitApproachOffset);
+
+        if (Vector2.Distance(rb.position, approachPoint) <= arrivalDistance * 4f)
+        {
+            return sheepPosition;
+        }
+
+        return approachPoint;
+    }
+
+    // makes the wolf weave around the flock instead of stalking in a straight line
+    private void UpdateStalkDirection()
+    {
+        if (stalkDirectionTimer > 0f)
+        {
+            return;
+        }
+
+        stalkOrbitDirection = Random.value < 0.5f ? -1f : 1f;
+        stalkDirectionTimer = stalkDirectionChangeInterval;
+    }
+
+    // decides whether the wolf should try to break up the flock before choosing a victim
+    private bool ShouldStartLunge(Vector2 flockCenter)
+    {
+        if (lungeChance <= 0f
+            || lungeDistance <= 0f
+            || lungeCooldownTimer > 0f
+            || !IsValidTarget(targetSheep)
+            || !HasLungeOpportunity())
+        {
+            return false;
+        }
+
+        Vector2 toFlock = flockCenter - rb.position;
+
+        if (toFlock.sqrMagnitude <= 0.0001f)
+        {
+            return false;
+        }
+
+        return Random.value < lungeChance;
+    }
+
+    // checks whether the flock is packed enough for a lunge to matter
+    private bool HasLungeOpportunity()
+    {
+        IReadOnlyList<SheepAgent> sheep = flockManager.Sheep;
+
+        for (int i = 0; i < sheep.Count; i++)
+        {
+            SheepAgent candidate = sheep[i];
+
+            if (!IsValidTarget(candidate))
+            {
+                continue;
+            }
+
+            if (candidate.NeighborCount >= 2)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     // sends the wolf away from the herd or nearby sheepdogs
     private Vector2 GetRetreatPoint()
     {
-        Vector2 retreatDirection = GetSheepdogAvoidanceDirection();
+        Vector2 preferredDirection = GetSheepdogAvoidanceDirection();
 
-        if (retreatDirection.sqrMagnitude <= 0.0001f && TryGetFlockCenter(out Vector2 flockCenter))
+        if (preferredDirection.sqrMagnitude <= 0.0001f && TryGetFlockCenter(out Vector2 flockCenter))
         {
-            retreatDirection = rb.position - flockCenter;
+            preferredDirection = rb.position - flockCenter;
         }
 
-        if (retreatDirection.sqrMagnitude <= 0.0001f)
+        if (preferredDirection.sqrMagnitude <= 0.0001f)
         {
-            retreatDirection = Vector2.left;
+            preferredDirection = Vector2.left;
         }
 
-        lastRetreatDirection = retreatDirection.normalized;
-        return GetReachableRetreatPoint(retreatDirection.normalized);
+        return GetBestRetreatPoint(preferredDirection.normalized);
+    }
+
+    // picks a short reachable burst point toward the flock
+    private Vector2 GetLungePoint(Vector2 lungeDirection)
+    {
+        if (lungeDirection.sqrMagnitude <= 0.0001f)
+        {
+            return rb.position;
+        }
+
+        Vector2 normalizedDirection = lungeDirection.normalized;
+        Vector2 fallbackTarget = rb.position + (normalizedDirection * lungeDistance);
+
+        if (obstacleLayers.value == 0)
+        {
+            return fallbackTarget;
+        }
+
+        RaycastHit2D hit = Physics2D.CircleCast(
+            rb.position,
+            collisionRadius,
+            normalizedDirection,
+            lungeDistance,
+            obstacleLayers
+        );
+
+        if (hit.collider == null)
+        {
+            return fallbackTarget;
+        }
+
+        float safeDistance = Mathf.Max(0f, hit.distance - collisionRadius - 0.1f);
+        return rb.position + (normalizedDirection * safeDistance);
     }
 
     // keeps the retreat target a little inside the pasture if a fence is in the way
@@ -435,12 +753,153 @@ public class Wolf : MonoBehaviour
 
         lastRetreatTargetAdjusted = true;
         lastRetreatHit = hit;
-        float safeDistance = Mathf.Max(0f, hit.distance - collisionRadius - arrivalDistance - 0.35f);
+        float safeDistance = Mathf.Max(0f, hit.distance - collisionRadius - arrivalDistance - retreatFencePadding);
         return rb.position + (retreatDirection * safeDistance);
     }
 
+    // picks the retreat direction that gives the wolf the most open space away from the flock
+    private Vector2 GetBestRetreatPoint(Vector2 preferredDirection)
+    {
+        float[] angleOffsets = { 0f, 30f, -30f, 60f, -60f, 90f, -90f, 135f, -135f, 180f };
+        Vector2 bestPoint = rb.position + (preferredDirection * retreatDistance);
+        Vector2 bestDirection = preferredDirection;
+        float bestScore = float.MinValue;
+        bool foundPoint = false;
+        RaycastHit2D bestHit = default;
+        bool bestAdjusted = false;
+        Vector2 flockCenter = rb.position;
+        bool hasFlockCenter = TryGetFlockCenter(out flockCenter);
+
+        for (int i = 0; i < angleOffsets.Length; i++)
+        {
+            Vector2 candidateDirection = Rotate(preferredDirection, angleOffsets[i]).normalized;
+            Vector2 candidatePoint = GetReachableRetreatPoint(candidateDirection);
+            float travelDistance = Vector2.Distance(rb.position, candidatePoint);
+
+            if (travelDistance <= arrivalDistance)
+            {
+                continue;
+            }
+
+            float alignmentScore = Vector2.Dot(candidateDirection, preferredDirection) * 2f;
+            float sheepClearance = GetNearestTargetSheepDistance(candidatePoint);
+            float flockDistance = hasFlockCenter ? Vector2.Distance(candidatePoint, flockCenter) : 0f;
+            float score = travelDistance * 2.5f + sheepClearance * 1.25f + flockDistance * 0.25f + alignmentScore;
+
+            if (score <= bestScore)
+            {
+                continue;
+            }
+
+            bestScore = score;
+            bestPoint = candidatePoint;
+            bestDirection = candidateDirection;
+            bestHit = lastRetreatHit;
+            bestAdjusted = lastRetreatTargetAdjusted;
+            foundPoint = true;
+        }
+
+        lastRetreatDirection = bestDirection;
+        lastRetreatHit = bestHit;
+        lastRetreatTargetAdjusted = bestAdjusted;
+        return foundPoint ? bestPoint : GetReachableRetreatPoint(preferredDirection);
+    }
+
+    // nudges stalking toward the same general orbit path without hugging fences
+    private Vector2 GetFenceSafeTravelPoint(Vector2 desiredPoint, float extraPadding)
+    {
+        Vector2 preferredDirection = desiredPoint - rb.position;
+
+        if (preferredDirection.sqrMagnitude <= 0.0001f || obstacleLayers.value == 0)
+        {
+            return desiredPoint;
+        }
+
+        float desiredDistance = preferredDirection.magnitude;
+        float[] angleOffsets = { 0f, 20f, -20f, 40f, -40f, 70f, -70f };
+        Vector2 bestPoint = desiredPoint;
+        float bestScore = float.MinValue;
+
+        for (int i = 0; i < angleOffsets.Length; i++)
+        {
+            Vector2 candidateDirection = Rotate(preferredDirection.normalized, angleOffsets[i]).normalized;
+            RaycastHit2D hit = Physics2D.CircleCast(
+                rb.position,
+                collisionRadius,
+                candidateDirection,
+                desiredDistance,
+                obstacleLayers
+            );
+
+            float safeDistance = hit.collider == null
+                ? desiredDistance
+                : Mathf.Max(0f, hit.distance - collisionRadius - arrivalDistance - extraPadding);
+
+            if (safeDistance <= arrivalDistance)
+            {
+                continue;
+            }
+
+            Vector2 candidatePoint = rb.position + (candidateDirection * safeDistance);
+            float score =
+                (Vector2.Dot(candidateDirection, preferredDirection.normalized) * 3f) +
+                (safeDistance / Mathf.Max(0.01f, desiredDistance));
+
+            if (score <= bestScore)
+            {
+                continue;
+            }
+
+            bestScore = score;
+            bestPoint = candidatePoint;
+        }
+
+        return bestPoint;
+    }
+
+    // checks how much room a point has before it runs back into the flock
+    private float GetNearestTargetSheepDistance(Vector2 point)
+    {
+        IReadOnlyList<SheepAgent> sheep = flockManager.Sheep;
+        float nearestDistance = 0f;
+        bool foundSheep = false;
+
+        for (int i = 0; i < sheep.Count; i++)
+        {
+            SheepAgent candidate = sheep[i];
+
+            if (!IsValidTarget(candidate))
+            {
+                continue;
+            }
+
+            float distance = Vector2.Distance(point, candidate.transform.position);
+
+            if (!foundSheep || distance < nearestDistance)
+            {
+                nearestDistance = distance;
+                foundSheep = true;
+            }
+        }
+
+        return foundSheep ? nearestDistance : retreatDistance;
+    }
+
+    // rotates a 2d direction by the given angle in degrees
+    private Vector2 Rotate(Vector2 direction, float angleDegrees)
+    {
+        float radians = angleDegrees * Mathf.Deg2Rad;
+        float sin = Mathf.Sin(radians);
+        float cos = Mathf.Cos(radians);
+
+        return new Vector2(
+            direction.x * cos - direction.y * sin,
+            direction.x * sin + direction.y * cos
+        );
+    }
+
     // moves the wolf toward a world position while also respecting sheepdog pressure
-    private void MoveTowards(Vector2 targetPosition, bool allowWallSlide = true)
+    private void MoveTowards(Vector2 targetPosition, bool allowWallSlide = true, float speedMultiplier = 1f)
     {
         Vector2 desiredDirection = targetPosition - rb.position;
         lastDesiredMoveTarget = targetPosition;
@@ -471,7 +930,7 @@ public class Wolf : MonoBehaviour
         Vector2 nextPosition = Vector2.MoveTowards(
             rb.position,
             rb.position + blendedDirection.normalized,
-            moveSpeed * Time.fixedDeltaTime
+            moveSpeed * speedMultiplier * Time.fixedDeltaTime
         );
 
         Vector2 moveDelta = nextPosition - rb.position;
@@ -694,8 +1153,103 @@ public class Wolf : MonoBehaviour
     private void EnterRetreatState()
     {
         state = WolfState.Retreat;
+        stateTimer = 0f;
         retreatTarget = GetRetreatPoint();
         targetSheep = null;
+    }
+
+    // resets the wolf to visible stalking instead of instantly reattacking
+    private void EnterStalkState()
+    {
+        state = WolfState.Stalk;
+        stateTimer = 0f;
+        nextAttackTime = Random.Range(stalkDurationMin, stalkDurationMax);
+        stalkDirectionTimer = 0f;
+        targetSheep = null;
+    }
+
+    // begins a short burst toward the flock before choosing a victim
+    private void EnterLungeState(Vector2 flockCenter)
+    {
+        state = WolfState.Lunge;
+        stateTimer = 0f;
+        lungeCooldownTimer = lungeCooldown;
+        Vector2 lungeDirection = IsValidTarget(targetSheep)
+            ? (Vector2)targetSheep.transform.position - rb.position
+            : flockCenter - rb.position;
+
+        if (lungeDirection.sqrMagnitude <= 0.0001f)
+        {
+            lungeDirection = flockCenter - rb.position;
+        }
+
+        lungeTarget = GetLungePoint(lungeDirection);
+        targetSheep = null;
+    }
+
+    // creates a small text label over the wolf for quick state reading
+    private void EnsureStateLabel()
+    {
+        stateLabel = GetComponentInChildren<TextMesh>();
+
+        if (stateLabel == null)
+        {
+            GameObject labelObject = new("State Label");
+            labelObject.transform.SetParent(transform, false);
+            stateLabel = labelObject.AddComponent<TextMesh>();
+        }
+
+        ApplyStateLabelSettings();
+        UpdateStateLabel();
+    }
+
+    // keeps the runtime text mesh in sync with the inspector settings
+    private void ApplyStateLabelSettings()
+    {
+        if (stateLabel == null)
+        {
+            return;
+        }
+
+        stateLabel.transform.localPosition = stateLabelOffset;
+        stateLabel.anchor = TextAnchor.MiddleCenter;
+        stateLabel.alignment = TextAlignment.Center;
+        stateLabel.fontSize = stateLabelFontSize;
+        stateLabel.characterSize = stateLabelCharacterSize;
+        stateLabel.color = stateLabelColor;
+
+        MeshRenderer labelRenderer = stateLabel.GetComponent<MeshRenderer>();
+
+        if (labelRenderer == null)
+        {
+            return;
+        }
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer != null)
+        {
+            labelRenderer.sortingLayerID = spriteRenderer.sortingLayerID;
+            labelRenderer.sortingOrder = spriteRenderer.sortingOrder + 1;
+        }
+    }
+
+    // shows the current state as one letter on top of the wolf triangle
+    private void UpdateStateLabel()
+    {
+        if (stateLabel == null)
+        {
+            return;
+        }
+
+        stateLabel.text = state switch
+        {
+            WolfState.Stalk => "S",
+            WolfState.Lunge => "L",
+            WolfState.Commit => "C",
+            WolfState.Retreat => "R",
+            _ => "?"
+        };
     }
 
     // validates that a sheep is still a real target
@@ -726,6 +1280,9 @@ public class Wolf : MonoBehaviour
             entry.AppendLine($"{indent}    target: {(targetSheep != null ? targetSheep.name : "none")}");
             entry.AppendLine($"{indent}    target score: {lastTargetScore:0.00}");
             entry.AppendLine($"{indent}    sheepdog threat: {lastSheepdogThreatening}");
+            entry.AppendLine($"{indent}    state time: {stateTimer:0.00}");
+            entry.AppendLine($"{indent}    attack time: {nextAttackTime:0.00}");
+            entry.AppendLine($"{indent}    lunge cooldown: {lungeCooldownTimer:0.00}");
         }
 
         if (BoidDebugPanel.LogWolfBehavior && BoidDebugPanel.LogWolfRetreatState)

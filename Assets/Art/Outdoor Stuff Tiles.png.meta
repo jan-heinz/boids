@@ -1,0 +1,5176 @@
+fileFormatVersion: 2
+guid: 59c331765f0cc4b19a1f1adceb7612be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6467346742112244536
+    second: Outdoor Stuff Tiles_0
+  - first:
+      213: -3124203117257110046
+    second: Outdoor Stuff Tiles_1
+  - first:
+      213: 8191753157787511168
+    second: Outdoor Stuff Tiles_2
+  - first:
+      213: 3027309964035173800
+    second: Outdoor Stuff Tiles_3
+  - first:
+      213: 2536076801866640912
+    second: Outdoor Stuff Tiles_4
+  - first:
+      213: -5472021941171661754
+    second: Outdoor Stuff Tiles_5
+  - first:
+      213: 7892070029758233025
+    second: Outdoor Stuff Tiles_6
+  - first:
+      213: 8730955886139688089
+    second: Outdoor Stuff Tiles_7
+  - first:
+      213: 3753021898467439064
+    second: Outdoor Stuff Tiles_8
+  - first:
+      213: -743968977167617734
+    second: Outdoor Stuff Tiles_9
+  - first:
+      213: 5536056829470443512
+    second: Outdoor Stuff Tiles_10
+  - first:
+      213: -3125068091233914798
+    second: Outdoor Stuff Tiles_11
+  - first:
+      213: -2432755082001446928
+    second: Outdoor Stuff Tiles_12
+  - first:
+      213: 5328558381212517910
+    second: Outdoor Stuff Tiles_13
+  - first:
+      213: -8297908387391460211
+    second: Outdoor Stuff Tiles_14
+  - first:
+      213: -6983654659286787115
+    second: Outdoor Stuff Tiles_15
+  - first:
+      213: 7123505834709257835
+    second: Outdoor Stuff Tiles_16
+  - first:
+      213: -8945755705234832453
+    second: Outdoor Stuff Tiles_17
+  - first:
+      213: 4991356463850020292
+    second: Outdoor Stuff Tiles_18
+  - first:
+      213: 3474107571655985699
+    second: Outdoor Stuff Tiles_19
+  - first:
+      213: 7937527117871322978
+    second: Outdoor Stuff Tiles_20
+  - first:
+      213: -4082428887235043681
+    second: Outdoor Stuff Tiles_21
+  - first:
+      213: 5395877312848081443
+    second: Outdoor Stuff Tiles_22
+  - first:
+      213: -8991928957856827546
+    second: Outdoor Stuff Tiles_23
+  - first:
+      213: -7181073806015560457
+    second: Outdoor Stuff Tiles_24
+  - first:
+      213: -2995377141642120200
+    second: Outdoor Stuff Tiles_25
+  - first:
+      213: -7218216286512709712
+    second: Outdoor Stuff Tiles_26
+  - first:
+      213: -7183941057189010230
+    second: Outdoor Stuff Tiles_27
+  - first:
+      213: -331836971247933796
+    second: Outdoor Stuff Tiles_28
+  - first:
+      213: -3959975738245361434
+    second: Outdoor Stuff Tiles_29
+  - first:
+      213: -3245904187099410805
+    second: Outdoor Stuff Tiles_30
+  - first:
+      213: -843842469248311733
+    second: Outdoor Stuff Tiles_31
+  - first:
+      213: 4705343601615959803
+    second: Outdoor Stuff Tiles_32
+  - first:
+      213: 1551378557700790214
+    second: Outdoor Stuff Tiles_33
+  - first:
+      213: 6253761767890154675
+    second: Outdoor Stuff Tiles_34
+  - first:
+      213: 6695106907536938111
+    second: Outdoor Stuff Tiles_35
+  - first:
+      213: 6695710241604143305
+    second: Outdoor Stuff Tiles_36
+  - first:
+      213: -9033110646084346077
+    second: Outdoor Stuff Tiles_37
+  - first:
+      213: 7876500665501967135
+    second: Outdoor Stuff Tiles_38
+  - first:
+      213: -950271479152021694
+    second: Outdoor Stuff Tiles_39
+  - first:
+      213: 4478784121355540609
+    second: Outdoor Stuff Tiles_40
+  - first:
+      213: -3727404499945929451
+    second: Outdoor Stuff Tiles_41
+  - first:
+      213: -3528533324943645903
+    second: Outdoor Stuff Tiles_42
+  - first:
+      213: 2376276973909049403
+    second: Outdoor Stuff Tiles_43
+  - first:
+      213: 5471545609324950766
+    second: Outdoor Stuff Tiles_44
+  - first:
+      213: -4199838444499764926
+    second: Outdoor Stuff Tiles_45
+  - first:
+      213: 659204139971378154
+    second: Outdoor Stuff Tiles_46
+  - first:
+      213: -6331745001866917983
+    second: Outdoor Stuff Tiles_47
+  - first:
+      213: 8623808959952306522
+    second: Outdoor Stuff Tiles_48
+  - first:
+      213: -9105014083338338726
+    second: Outdoor Stuff Tiles_49
+  - first:
+      213: -3757956532010114795
+    second: Outdoor Stuff Tiles_50
+  - first:
+      213: -7935040718447535983
+    second: Outdoor Stuff Tiles_51
+  - first:
+      213: 6882259376307543762
+    second: Outdoor Stuff Tiles_52
+  - first:
+      213: 6675979823516771708
+    second: Outdoor Stuff Tiles_53
+  - first:
+      213: -4661863322668391350
+    second: Outdoor Stuff Tiles_54
+  - first:
+      213: -8825825383156708307
+    second: Outdoor Stuff Tiles_55
+  - first:
+      213: 8050777179824057068
+    second: Outdoor Stuff Tiles_56
+  - first:
+      213: 7789509413827773493
+    second: Outdoor Stuff Tiles_57
+  - first:
+      213: 3775927712205224939
+    second: Outdoor Stuff Tiles_58
+  - first:
+      213: -2590731963895070309
+    second: Outdoor Stuff Tiles_59
+  - first:
+      213: 1200583341489465896
+    second: Outdoor Stuff Tiles_60
+  - first:
+      213: -579466176171820353
+    second: Outdoor Stuff Tiles_61
+  - first:
+      213: -7714223193929080144
+    second: Outdoor Stuff Tiles_62
+  - first:
+      213: 9187487724582512572
+    second: Outdoor Stuff Tiles_63
+  - first:
+      213: 3805349365268603920
+    second: Outdoor Stuff Tiles_64
+  - first:
+      213: -6413745462335698696
+    second: Outdoor Stuff Tiles_65
+  - first:
+      213: -4860595222811561558
+    second: Outdoor Stuff Tiles_66
+  - first:
+      213: -1069122497448265337
+    second: Outdoor Stuff Tiles_67
+  - first:
+      213: -8376111452383312967
+    second: Outdoor Stuff Tiles_68
+  - first:
+      213: -2331234578694860748
+    second: Outdoor Stuff Tiles_69
+  - first:
+      213: -1061826853298554968
+    second: Outdoor Stuff Tiles_70
+  - first:
+      213: -1607148318410956693
+    second: Outdoor Stuff Tiles_71
+  - first:
+      213: 3550955709890415168
+    second: Outdoor Stuff Tiles_72
+  - first:
+      213: 5314607135546529966
+    second: Outdoor Stuff Tiles_73
+  - first:
+      213: 6982610937473370211
+    second: Outdoor Stuff Tiles_74
+  - first:
+      213: -3901519529178208976
+    second: Outdoor Stuff Tiles_75
+  - first:
+      213: 1256854314934184126
+    second: Outdoor Stuff Tiles_76
+  - first:
+      213: 1333170538428677980
+    second: Outdoor Stuff Tiles_77
+  - first:
+      213: -5434314916801943970
+    second: Outdoor Stuff Tiles_78
+  - first:
+      213: 5075486593554514169
+    second: Outdoor Stuff Tiles_79
+  - first:
+      213: -69936031092150265
+    second: Outdoor Stuff Tiles_80
+  - first:
+      213: -320149451866869969
+    second: Outdoor Stuff Tiles_81
+  - first:
+      213: 1985385961143551964
+    second: Outdoor Stuff Tiles_82
+  - first:
+      213: -3231432946274924429
+    second: Outdoor Stuff Tiles_83
+  - first:
+      213: -8039072790327768705
+    second: Outdoor Stuff Tiles_84
+  - first:
+      213: 9026113942280993995
+    second: Outdoor Stuff Tiles_85
+  - first:
+      213: 3985852149211290697
+    second: Outdoor Stuff Tiles_86
+  - first:
+      213: 8116723554877633926
+    second: Outdoor Stuff Tiles_87
+  - first:
+      213: -6598456555536525925
+    second: Outdoor Stuff Tiles_88
+  - first:
+      213: 1881527123448128527
+    second: Outdoor Stuff Tiles_89
+  - first:
+      213: 4546346387437111957
+    second: Outdoor Stuff Tiles_90
+  - first:
+      213: -1155803803789672763
+    second: Outdoor Stuff Tiles_91
+  - first:
+      213: 1925375534769865080
+    second: Outdoor Stuff Tiles_92
+  - first:
+      213: -2575350040418102009
+    second: Outdoor Stuff Tiles_93
+  - first:
+      213: 6120700351043457301
+    second: Outdoor Stuff Tiles_94
+  - first:
+      213: 4509654696554217655
+    second: Outdoor Stuff Tiles_95
+  - first:
+      213: 3068452021161288426
+    second: Outdoor Stuff Tiles_96
+  - first:
+      213: 1015358336653560522
+    second: Outdoor Stuff Tiles_97
+  - first:
+      213: 5569843336530282486
+    second: Outdoor Stuff Tiles_98
+  - first:
+      213: 3305011534324955146
+    second: Outdoor Stuff Tiles_99
+  - first:
+      213: -7828137525153315086
+    second: Outdoor Stuff Tiles_100
+  - first:
+      213: 3365718929848706273
+    second: Outdoor Stuff Tiles_101
+  - first:
+      213: -7327787389734668640
+    second: Outdoor Stuff Tiles_102
+  - first:
+      213: 529266767279984738
+    second: Outdoor Stuff Tiles_103
+  - first:
+      213: -3183535440014697211
+    second: Outdoor Stuff Tiles_104
+  - first:
+      213: -2198670486885357665
+    second: Outdoor Stuff Tiles_105
+  - first:
+      213: 8566115859732631598
+    second: Outdoor Stuff Tiles_106
+  - first:
+      213: -5169103573951050402
+    second: Outdoor Stuff Tiles_107
+  - first:
+      213: 3786591507521096998
+    second: Outdoor Stuff Tiles_108
+  - first:
+      213: 163679923248671100
+    second: Outdoor Stuff Tiles_109
+  - first:
+      213: 921793568898516279
+    second: Outdoor Stuff Tiles_110
+  - first:
+      213: -6273285768719461201
+    second: Outdoor Stuff Tiles_111
+  - first:
+      213: -245600712893822832
+    second: Outdoor Stuff Tiles_112
+  - first:
+      213: -4134776244175564063
+    second: Outdoor Stuff Tiles_113
+  - first:
+      213: 2894982784137651944
+    second: Outdoor Stuff Tiles_114
+  - first:
+      213: -183630999670141487
+    second: Outdoor Stuff Tiles_115
+  - first:
+      213: -3589777924921289924
+    second: Outdoor Stuff Tiles_116
+  - first:
+      213: -2266119649044577993
+    second: Outdoor Stuff Tiles_117
+  - first:
+      213: -3539675963384315595
+    second: Outdoor Stuff Tiles_118
+  - first:
+      213: -3932771273914536676
+    second: Outdoor Stuff Tiles_119
+  - first:
+      213: -5293337896332729203
+    second: Outdoor Stuff Tiles_120
+  - first:
+      213: -3204060139521331896
+    second: Outdoor Stuff Tiles_121
+  - first:
+      213: -8087543974345021896
+    second: Outdoor Stuff Tiles_122
+  - first:
+      213: -8094268809517915491
+    second: Outdoor Stuff Tiles_123
+  - first:
+      213: 8416974792929696180
+    second: Outdoor Stuff Tiles_124
+  - first:
+      213: -7588695888701938628
+    second: Outdoor Stuff Tiles_125
+  - first:
+      213: -3701455206211101020
+    second: Outdoor Stuff Tiles_126
+  - first:
+      213: 6089892382407049897
+    second: Outdoor Stuff Tiles_127
+  - first:
+      213: 8214474422586522226
+    second: Outdoor Stuff Tiles_128
+  - first:
+      213: -8676043738684471711
+    second: Outdoor Stuff Tiles_129
+  - first:
+      213: -3007759196807616464
+    second: Outdoor Stuff Tiles_130
+  - first:
+      213: 4153197256369510335
+    second: Outdoor Stuff Tiles_131
+  - first:
+      213: 17108378811844710
+    second: Outdoor Stuff Tiles_132
+  - first:
+      213: -8109327586889209684
+    second: Outdoor Stuff Tiles_133
+  - first:
+      213: -1209949676415075043
+    second: Outdoor Stuff Tiles_134
+  - first:
+      213: 563341484670699293
+    second: Outdoor Stuff Tiles_135
+  - first:
+      213: -2574437719012230260
+    second: Outdoor Stuff Tiles_136
+  - first:
+      213: -8060116682648623240
+    second: Outdoor Stuff Tiles_137
+  - first:
+      213: 7916968312040979160
+    second: Outdoor Stuff Tiles_138
+  - first:
+      213: 4452771849182195964
+    second: Outdoor Stuff Tiles_139
+  - first:
+      213: 3638557177545557669
+    second: Outdoor Stuff Tiles_140
+  - first:
+      213: 1063338687284384628
+    second: Outdoor Stuff Tiles_141
+  - first:
+      213: 8371573389792021863
+    second: Outdoor Stuff Tiles_142
+  - first:
+      213: 1978278416066333499
+    second: Outdoor Stuff Tiles_143
+  - first:
+      213: -1069165968743296087
+    second: Outdoor Stuff Tiles_144
+  - first:
+      213: -6098221924292966495
+    second: Outdoor Stuff Tiles_145
+  - first:
+      213: -6548343811289475459
+    second: Outdoor Stuff Tiles_146
+  - first:
+      213: -1142793668635731300
+    second: Outdoor Stuff Tiles_147
+  - first:
+      213: -7621312318417539177
+    second: Outdoor Stuff Tiles_148
+  - first:
+      213: -9065774262394001600
+    second: Outdoor Stuff Tiles_149
+  - first:
+      213: -6744502029991490754
+    second: Outdoor Stuff Tiles_150
+  - first:
+      213: 6087160120710525737
+    second: Outdoor Stuff Tiles_151
+  - first:
+      213: -6275860374539477571
+    second: Outdoor Stuff Tiles_152
+  - first:
+      213: -8935566078119471866
+    second: Outdoor Stuff Tiles_153
+  - first:
+      213: -607627487587682695
+    second: Outdoor Stuff Tiles_154
+  - first:
+      213: -1293885268544662933
+    second: Outdoor Stuff Tiles_155
+  - first:
+      213: -2213279548502107331
+    second: Outdoor Stuff Tiles_156
+  - first:
+      213: 6957059526146239235
+    second: Outdoor Stuff Tiles_157
+  - first:
+      213: 2325557345324711032
+    second: Outdoor Stuff Tiles_158
+  - first:
+      213: -4209283866990519611
+    second: Outdoor Stuff Tiles_159
+  - first:
+      213: 621886578905568679
+    second: Outdoor Stuff Tiles_160
+  - first:
+      213: -3853481090655545717
+    second: Outdoor Stuff Tiles_161
+  - first:
+      213: -7654534487007837995
+    second: Outdoor Stuff Tiles_162
+  - first:
+      213: 21745864849632722
+    second: Outdoor Stuff Tiles_163
+  - first:
+      213: 3651302528886004918
+    second: Outdoor Stuff Tiles_164
+  - first:
+      213: -234543365710846019
+    second: Outdoor Stuff Tiles_165
+  - first:
+      213: -3536523995165989177
+    second: Outdoor Stuff Tiles_166
+  - first:
+      213: -8271286261684851066
+    second: Outdoor Stuff Tiles_167
+  - first:
+      213: -7635539010510960247
+    second: Outdoor Stuff Tiles_168
+  - first:
+      213: -2226098623936361240
+    second: Outdoor Stuff Tiles_169
+  - first:
+      213: -3060458871263804242
+    second: Outdoor Stuff Tiles_170
+  - first:
+      213: -7034047877155628883
+    second: Outdoor Stuff Tiles_171
+  - first:
+      213: -8424017666428245473
+    second: Outdoor Stuff Tiles_172
+  - first:
+      213: -8303796024051693497
+    second: Outdoor Stuff Tiles_173
+  - first:
+      213: 5735854198726211607
+    second: Outdoor Stuff Tiles_174
+  - first:
+      213: 1525901975660611320
+    second: Outdoor Stuff Tiles_175
+  - first:
+      213: 6261725384585667663
+    second: Outdoor Stuff Tiles_176
+  - first:
+      213: -1151547516668120611
+    second: Outdoor Stuff Tiles_177
+  - first:
+      213: 8917548700107284245
+    second: Outdoor Stuff Tiles_178
+  - first:
+      213: 1063862823980448693
+    second: Outdoor Stuff Tiles_179
+  - first:
+      213: -7285294661445243740
+    second: Outdoor Stuff Tiles_180
+  - first:
+      213: -8164905252027831648
+    second: Outdoor Stuff Tiles_181
+  - first:
+      213: 6614601480766115108
+    second: Outdoor Stuff Tiles_182
+  - first:
+      213: -6272597064612142234
+    second: Outdoor Stuff Tiles_183
+  - first:
+      213: 2226946972540205368
+    second: Outdoor Stuff Tiles_184
+  - first:
+      213: -4277770796774097237
+    second: Outdoor Stuff Tiles_185
+  - first:
+      213: -1099851115637896999
+    second: Outdoor Stuff Tiles_186
+  - first:
+      213: -1085307319679161663
+    second: Outdoor Stuff Tiles_187
+  - first:
+      213: -913049822045539142
+    second: Outdoor Stuff Tiles_188
+  - first:
+      213: -6664426654807306342
+    second: Outdoor Stuff Tiles_189
+  - first:
+      213: 3216215521792307175
+    second: Outdoor Stuff Tiles_190
+  - first:
+      213: -3018180117290705120
+    second: Outdoor Stuff Tiles_191
+  - first:
+      213: 4195973484542773353
+    second: Outdoor Stuff Tiles_192
+  - first:
+      213: 1388574429839875462
+    second: Outdoor Stuff Tiles_193
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 484
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ccae1d476e5f36a0800000000000000
+      internalID: -6467346742112244536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 468
+        width: 15
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edc8bd41d994a4d0800000000000000
+      internalID: -3124203117257110046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 468
+        width: 15
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089eb916814fea170800000000000000
+      internalID: 8191753157787511168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 484
+        width: 10
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad21577f5a230a20800000000000000
+      internalID: 3027309964035173800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_4
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 496
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01eae522a64f13320800000000000000
+      internalID: 2536076801866640912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_5
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 496
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 644d15959097f04b0800000000000000
+      internalID: -5472021941171661754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 496
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9fe3ac0e3468d60800000000000000
+      internalID: 7892070029758233025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 453
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99446feae169a2970800000000000000
+      internalID: 8730955886139688089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 433
+        width: 48
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1f9644889651430800000000000000
+      internalID: 3753021898467439064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 448
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3173003824eca5f0800000000000000
+      internalID: -743968977167617734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_10
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 453
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f706f8ea5604dc40800000000000000
+      internalID: 5536056829470443512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_11
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 448
+        width: 42
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250381bd02781a4d0800000000000000
+      internalID: -3125068091233914798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 448
+        width: 28
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f707c7642e1d3ed0800000000000000
+      internalID: -2432755082001446928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_13
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 144
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6164a15ad97d2f940800000000000000
+      internalID: 5328558381212517910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_14
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 482
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c2cce2948e7dc80800000000000000
+      internalID: -8297908387391460211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 471
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db953f9613151f90800000000000000
+      internalID: -6983654659286787115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 471
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e844190d6cbd260800000000000000
+      internalID: 7123505834709257835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 471
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3cd0e259a4ad380800000000000000
+      internalID: -8945755705234832453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_18
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 480
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd512f224cd44540800000000000000
+      internalID: 4991356463850020292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_19
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 480
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32acc080e62863030800000000000000
+      internalID: 3474107571655985699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 448
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26710cfdbd2c72e60800000000000000
+      internalID: 7937527117871322978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_21
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 455
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9edf838e8c4857c0800000000000000
+      internalID: -4082428887235043681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32236e3d3d102ea40800000000000000
+      internalID: 5395877312848081443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_23
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 455
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667356d0140463380800000000000000
+      internalID: -8991928957856827546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 448
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4849e9b63b75c90800000000000000
+      internalID: -7181073806015560457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 455
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3b8102c584e66d0800000000000000
+      internalID: -2995377141642120200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_26
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 435
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf787af78eb3db90800000000000000
+      internalID: -7218216286512709712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_27
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 440
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4a7eeaba38d4c90800000000000000
+      internalID: -7183941057189010230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_28
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 434
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c96ec656804156bf0800000000000000
+      internalID: -331836971247933796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_29
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 439
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e058b20c075b09c0800000000000000
+      internalID: -3959975738245361434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_30
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 423
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e8cf0e65b34f2d0800000000000000
+      internalID: -3245904187099410805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_31
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 437
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ed01ebeb11a44f0800000000000000
+      internalID: -843842469248311733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_32
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 420
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf6f970631dbc4140800000000000000
+      internalID: 4705343601615959803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_33
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 420
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7d9e3249a978510800000000000000
+      internalID: 1551378557700790214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_34
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 416
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4f20da133d9c650800000000000000
+      internalID: 6253761767890154675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_35
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 416
+        width: 60
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f74d00d924cc9ec50800000000000000
+      internalID: 6695106907536938111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_36
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 346
+        width: 78
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c882c54df0fbec50800000000000000
+      internalID: 6695710241604143305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_37
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 346
+        width: 78
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32fd7531ab1f3a280800000000000000
+      internalID: -9033110646084346077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_38
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 320
+        width: 95
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f136f50bf93fe4d60800000000000000
+      internalID: 7876500665501967135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_39
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 416
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f65fcdf15ffc2f0800000000000000
+      internalID: -950271479152021694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_40
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 423
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1889e03cd66d72e30800000000000000
+      internalID: 4478784121355540609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515c78e1b59954cc0800000000000000
+      internalID: -3727404499945929451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_42
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 423
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1332b9cc2a1280fc0800000000000000
+      internalID: -3528533324943645903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 416
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b300ac5515b3af020800000000000000
+      internalID: 2376276973909049403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_44
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 417
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee479200eb5deeb40800000000000000
+      internalID: 5471545609324950766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_45
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 417
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249ff89bf2d27b5c0800000000000000
+      internalID: -4199838444499764926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_46
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 417
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebf5753ca6f52900800000000000000
+      internalID: 659204139971378154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_47
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 420
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a70e53c77f1128a0800000000000000
+      internalID: -6331745001866917983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_48
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 387
+        width: 96
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51c9c4ee8ceda770800000000000000
+      internalID: 8623808959952306522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_49
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 355
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5e70bf7eed74a180800000000000000
+      internalID: -9105014083338338726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_50
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 387
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511ad24d17e09dbc0800000000000000
+      internalID: -3757956532010114795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_51
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 355
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1989caa128211e190800000000000000
+      internalID: -7935040718447535983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_52
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 387
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2de99e06072b28f50800000000000000
+      internalID: 6882259376307543762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_53
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 357
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7564645748d5ac50800000000000000
+      internalID: 6675979823516771708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_54
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 389
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44ade4f10cbd4fb0800000000000000
+      internalID: -4661863322668391350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_55
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 368
+        width: 44
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c8153439e548580800000000000000
+      internalID: -8825825383156708307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_56
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 400
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceaeb31b03b1abf60800000000000000
+      internalID: 8050777179824057068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_57
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 353
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53404c19a85e91c60800000000000000
+      internalID: 7789509413827773493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_58
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 370
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebbb8f9f3ac66430800000000000000
+      internalID: 3775927712205224939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_59
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 370
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91c8cf410fdb0cd0800000000000000
+      internalID: -2590731963895070309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_60
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 275
+        width: 10
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a2bb8203459a010800000000000000
+      internalID: 1200583341489465896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_61
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 275
+        width: 12
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbabce9359255f7f0800000000000000
+      internalID: -579466176171820353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_62
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 277
+        width: 8
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b227c770e291f490800000000000000
+      internalID: -7714223193929080144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_63
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 304
+        width: 12
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7a00a7863808f70800000000000000
+      internalID: 9187487724582512572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_64
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 354
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014e71b06115fc430800000000000000
+      internalID: 3805349365268603920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_65
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 354
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f805b5cb7ccdf6a0800000000000000
+      internalID: -6413745462335698696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_66
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 320
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa13b5bb562bb8cb0800000000000000
+      internalID: -4860595222811561558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_67
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 340
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789b736c0c6b921f0800000000000000
+      internalID: -1069122497448265337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_68
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 340
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b38c99330312cb80800000000000000
+      internalID: -8376111452383312967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_69
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 340
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43019c8808ac5afd0800000000000000
+      internalID: -2331234578694860748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_70
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 340
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a73b2c4a12a341f0800000000000000
+      internalID: -1061826853298554968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_71
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 340
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60afb39e1342b9e0800000000000000
+      internalID: -1607148318410956693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_72
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 343
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ac9258767874130800000000000000
+      internalID: 3550955709890415168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_73
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 337
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8d103280741c940800000000000000
+      internalID: 5314607135546529966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_74
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 323
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3688bd4f6a737e060800000000000000
+      internalID: 6982610937473370211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_75
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 323
+        width: 44
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035651bc8a40bd9c0800000000000000
+      internalID: -3901519529178208976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_76
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 325
+        width: 40
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8a110275e317110800000000000000
+      internalID: 1256854314934184126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_77
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 321
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5fbe009a8f508210800000000000000
+      internalID: 1333170538428677980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_78
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 321
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56e96a106f6594b0800000000000000
+      internalID: -5434314916801943970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_79
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 326
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0031f6a20cf6640800000000000000
+      internalID: 5075486593554514169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_80
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 325
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70070cddc89870ff0800000000000000
+      internalID: -69936031092150265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_81
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 325
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f607e05c99e8bf0800000000000000
+      internalID: -320149451866869969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_82
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 330
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7420c33028d8b10800000000000000
+      internalID: 1985385961143551964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_83
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 329
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3780ac13bd4a723d0800000000000000
+      internalID: -3231432946274924429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_84
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 327
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f794109d3e97f6090800000000000000
+      internalID: -8039072790327768705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_85
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 314
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bccfbdfdec2334d70800000000000000
+      internalID: 9026113942280993995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_86
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 314
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c57f86967905730800000000000000
+      internalID: 3985852149211290697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_87
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 322
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685f684a11564a070800000000000000
+      internalID: 8116723554877633926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_88
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 305
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95d56d09b29d64a0800000000000000
+      internalID: -6598456555536525925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_89
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 310
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04636433f68c1a10800000000000000
+      internalID: 1881527123448128527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_90
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ac119a3fdd71f30800000000000000
+      internalID: 4546346387437111957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_91
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce321d6092c5ffe0800000000000000
+      internalID: -1155803803789672763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_92
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 314
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8718f2909de48ba10800000000000000
+      internalID: 1925375534769865080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_93
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 313
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705579478c4824cd0800000000000000
+      internalID: -2575350040418102009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_94
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 311
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511dd885a8811f450800000000000000
+      internalID: 6120700351043457301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_95
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 313
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b049c7ad03859e30800000000000000
+      internalID: 4509654696554217655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_96
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 311
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2e5ab1bd4559a20800000000000000
+      internalID: 3068452021161288426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_97
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 291
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca87ff0707471e00800000000000000
+      internalID: 1015358336653560522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_98
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7c678110f0c4d40800000000000000
+      internalID: 5569843336530282486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_99
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 291
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08f102da72cddd20800000000000000
+      internalID: 3305011534324955146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_100
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6c458656edc5390800000000000000
+      internalID: -7828137525153315086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_101
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4a07bc88f65be20800000000000000
+      internalID: 3365718929848706273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_102
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 265
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6374d71387e4a90800000000000000
+      internalID: -7327787389734668640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_103
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 265
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26094271255585700800000000000000
+      internalID: 529266767279984738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_104
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 306
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d9e08626fc1d3d0800000000000000
+      internalID: -3183535440014697211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_105
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 306
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97201b57d0cc71e0800000000000000
+      internalID: -2198670486885357665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_106
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 275
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20143c3df4f0e670800000000000000
+      internalID: 8566115859732631598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_107
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 274
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5d0273cfa7a348b0800000000000000
+      internalID: -5169103573951050402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_108
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 275
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d4e43f9ecac8430800000000000000
+      internalID: 3786591507521096998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_109
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 274
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79a912e502854200800000000000000
+      internalID: 163679923248671100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_110
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 246
+        width: 10
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7358f66fd5edacc00800000000000000
+      internalID: 921793568898516279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_111
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 246
+        width: 11
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa496f4a4dfc0f8a0800000000000000
+      internalID: -6273285768719461201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_112
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 246
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098816fe373779cf0800000000000000
+      internalID: -245600712893822832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_113
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 282
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e21134b9e25e96c0800000000000000
+      internalID: -4134776244175564063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_114
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 282
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6656ff08b0d2820800000000000000
+      internalID: 2894982784137651944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_115
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 243
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd49e6249c937df0800000000000000
+      internalID: -183630999670141487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_116
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 242
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33178a2ffb8e2ec0800000000000000
+      internalID: -3589777924921289924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_117
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 243
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7314a248f202d80e0800000000000000
+      internalID: -2266119649044577993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_118
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 242
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5314d7e177b80eec0800000000000000
+      internalID: -3539675963384315595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_119
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 242
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1da673fc5dfb69c0800000000000000
+      internalID: -3932771273914536676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_120
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 211
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8469f48a394a86b0800000000000000
+      internalID: -5293337896332729203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_121
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 242
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84da7d86744e883d0800000000000000
+      internalID: -3204060139521331896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_122
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 211
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83660dfda9543cf80800000000000000
+      internalID: -8087543974345021896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_123
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 229
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d92292c27616baf80800000000000000
+      internalID: -8094268809517915491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_124
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 229
+        width: 12
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9ddf7aaf91fc470800000000000000
+      internalID: 8416974792929696180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_125
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 250
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c34247dbb498fa690800000000000000
+      internalID: -7588695888701938628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_126
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 250
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae54c1e91ac1acc0800000000000000
+      internalID: -3701455206211101020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_127
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 210
+        width: 64
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a2cabd2bd4a38450800000000000000
+      internalID: 6089892382407049897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_128
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 231
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a3dc617fcaff170800000000000000
+      internalID: 8214474422586522226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_129
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 211
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166c5f3ff20889780800000000000000
+      internalID: -8676043738684471711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_130
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 210
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0382e5042fa4246d0800000000000000
+      internalID: -3007759196807616464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_131
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 211
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7180c66ee13a930800000000000000
+      internalID: 4153197256369510335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_132
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 210
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66843c9daf7cc3000800000000000000
+      internalID: 17108378811844710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_133
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 210
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca861385681e57f80800000000000000
+      internalID: -8109327586889209684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_134
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 194
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d3e2d0e25653fe0800000000000000
+      internalID: -1209949676415075043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_135
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 210
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17c909781461d700800000000000000
+      internalID: 563341484670699293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_136
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 194
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bb8e5d882c54cd0800000000000000
+      internalID: -2574437719012230260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_137
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 181
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877678ad496b42090800000000000000
+      internalID: -8060116682648623240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_138
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 218
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daf931ebb8bedd60800000000000000
+      internalID: 7916968312040979160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_139
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 218
+        width: 77
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf03d50b76c6bcd30800000000000000
+      internalID: 4452771849182195964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_140
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 199
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a60d8e9970ce7230800000000000000
+      internalID: 3638557177545557669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_141
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 179
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473148bf6ecb1ce00800000000000000
+      internalID: 1063338687284384628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_142
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 178
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d8aadb4adcd2470800000000000000
+      internalID: 8371573389792021863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_143
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 180
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bc470fcb1447b10800000000000000
+      internalID: 1978278416066333499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_144
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 182
+        width: 48
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a39e13573f8921f0800000000000000
+      internalID: -1069165968743296087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_145
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 182
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7c4093873ce5ba0800000000000000
+      internalID: -6098221924292966495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_146
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 182
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7696fc8ffb9f15a0800000000000000
+      internalID: -6548343811289475459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_147
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 192
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ad661963bf320f0800000000000000
+      internalID: -1142793668635731300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_148
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 192
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79fe96a63d8ab3690800000000000000
+      internalID: -7621312318417539177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_149
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 192
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04760244756ef2280800000000000000
+      internalID: -9065774262394001600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_150
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 192
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bc47b3327b662a0800000000000000
+      internalID: -6744502029991490754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_151
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 96
+        width: 80
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923ffdde0efe97450800000000000000
+      internalID: 6087160120710525737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_152
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 161
+        width: 14
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbddf938d3aa7e8a0800000000000000
+      internalID: -6275860374539477571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_153
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 161
+        width: 14
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60598ae9efd7ef380800000000000000
+      internalID: -8935566078119471866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_154
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 196
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976b296f4064197f0800000000000000
+      internalID: -607627487587682695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_155
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 180
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62d84c14323b0ee0800000000000000
+      internalID: -1293885268544662933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_156
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 162
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b15e22af9d841e0800000000000000
+      internalID: -2213279548502107331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_157
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 131
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ba13967c07c8060800000000000000
+      internalID: 6957059526146239235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_158
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 162
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c31e0951a064020800000000000000
+      internalID: 2325557345324711032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_159
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 131
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca5f3def9e9595c0800000000000000
+      internalID: -4209283866990519611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_160
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 176
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5df327c8261a800800000000000000
+      internalID: 621886578905568679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_161
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 176
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b869aca5d5fa58ac0800000000000000
+      internalID: -3853481090655545717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_162
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 176
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d0cbe48071a5c590800000000000000
+      internalID: -7654534487007837995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_163
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 176
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd22b5bfb14d4000800000000000000
+      internalID: 21745864849632722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_164
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 176
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc5cb9fd480ca230800000000000000
+      internalID: 3651302528886004918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_165
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 178
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db761623d0cbebcf0800000000000000
+      internalID: -234543365710846019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_166
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 148
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c66c78e92ebbeec0800000000000000
+      internalID: -3536523995165989177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_167
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 148
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ea4b8d7fc763d80800000000000000
+      internalID: -8271286261684851066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_168
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 131
+        width: 26
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9894bd989bd190690800000000000000
+      internalID: -7635539010510960247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_169
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 130
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec894d881f4b11e0800000000000000
+      internalID: -2226098623936361240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_170
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 114
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4c0a02fd01785d0800000000000000
+      internalID: -3060458871263804242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_171
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 130
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da85c0549ba026e90800000000000000
+      internalID: -7034047877155628883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_172
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 114
+        width: 26
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1aede29090e71b80800000000000000
+      internalID: -8424017666428245473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_173
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 131
+        width: 64
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7480913f28df2cc80800000000000000
+      internalID: -8303796024051693497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_174
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 144
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718328ef009d99f40800000000000000
+      internalID: 5735854198726211607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_175
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 144
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6415523c71d2510800000000000000
+      internalID: 1525901975660611320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_176
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 144
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44664daf0e16e650800000000000000
+      internalID: 6261725384585667663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_177
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 144
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1730f72a1e400f0800000000000000
+      internalID: -1151547516668120611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_178
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 131
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f1429ab4f71cb70800000000000000
+      internalID: 8917548700107284245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_179
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 118
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb39111a9993ce00800000000000000
+      internalID: 1063862823980448693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_180
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 100
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aca184ca1f65ea90800000000000000
+      internalID: -7285294661445243740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_181
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 128
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aae82cceed60be80800000000000000
+      internalID: -8164905252027831648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_182
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 112
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d46d74009cbcb50800000000000000
+      internalID: 6614601480766115108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_183
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 12
+        width: 34
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663a2a0143243f8a0800000000000000
+      internalID: -6272597064612142234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_184
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 839f3eff874b7ee10800000000000000
+      internalID: 2226946972540205368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_185
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 80
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae7dbbff1e42a4c0800000000000000
+      internalID: -4277770796774097237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_186
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 80
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d80692dc3b8cb0f0800000000000000
+      internalID: -1099851115637896999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_187
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 80
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca64623eb630f0f0800000000000000
+      internalID: -1085307319679161663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_188
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 80
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4fdbe36023453f0800000000000000
+      internalID: -913049822045539142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_189
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 80
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fc09064433383a0800000000000000
+      internalID: -6664426654807306342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_190
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 81
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef27811afa42ac20800000000000000
+      internalID: 3216215521792307175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_191
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 82
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f9db0ac254d16d0800000000000000
+      internalID: -3018180117290705120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_192
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 16
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968412927a71b3a30800000000000000
+      internalID: 4195973484542773353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Outdoor Stuff Tiles_193
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 240
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ddbc24615354310800000000000000
+      internalID: 1388574429839875462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 227513eded3e041a8bcfb51638b75e3c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Outdoor Stuff Tiles_0: -6467346742112244536
+      Outdoor Stuff Tiles_1: -3124203117257110046
+      Outdoor Stuff Tiles_10: 5536056829470443512
+      Outdoor Stuff Tiles_100: -7828137525153315086
+      Outdoor Stuff Tiles_101: 3365718929848706273
+      Outdoor Stuff Tiles_102: -7327787389734668640
+      Outdoor Stuff Tiles_103: 529266767279984738
+      Outdoor Stuff Tiles_104: -3183535440014697211
+      Outdoor Stuff Tiles_105: -2198670486885357665
+      Outdoor Stuff Tiles_106: 8566115859732631598
+      Outdoor Stuff Tiles_107: -5169103573951050402
+      Outdoor Stuff Tiles_108: 3786591507521096998
+      Outdoor Stuff Tiles_109: 163679923248671100
+      Outdoor Stuff Tiles_11: -3125068091233914798
+      Outdoor Stuff Tiles_110: 921793568898516279
+      Outdoor Stuff Tiles_111: -6273285768719461201
+      Outdoor Stuff Tiles_112: -245600712893822832
+      Outdoor Stuff Tiles_113: -4134776244175564063
+      Outdoor Stuff Tiles_114: 2894982784137651944
+      Outdoor Stuff Tiles_115: -183630999670141487
+      Outdoor Stuff Tiles_116: -3589777924921289924
+      Outdoor Stuff Tiles_117: -2266119649044577993
+      Outdoor Stuff Tiles_118: -3539675963384315595
+      Outdoor Stuff Tiles_119: -3932771273914536676
+      Outdoor Stuff Tiles_12: -2432755082001446928
+      Outdoor Stuff Tiles_120: -5293337896332729203
+      Outdoor Stuff Tiles_121: -3204060139521331896
+      Outdoor Stuff Tiles_122: -8087543974345021896
+      Outdoor Stuff Tiles_123: -8094268809517915491
+      Outdoor Stuff Tiles_124: 8416974792929696180
+      Outdoor Stuff Tiles_125: -7588695888701938628
+      Outdoor Stuff Tiles_126: -3701455206211101020
+      Outdoor Stuff Tiles_127: 6089892382407049897
+      Outdoor Stuff Tiles_128: 8214474422586522226
+      Outdoor Stuff Tiles_129: -8676043738684471711
+      Outdoor Stuff Tiles_13: 5328558381212517910
+      Outdoor Stuff Tiles_130: -3007759196807616464
+      Outdoor Stuff Tiles_131: 4153197256369510335
+      Outdoor Stuff Tiles_132: 17108378811844710
+      Outdoor Stuff Tiles_133: -8109327586889209684
+      Outdoor Stuff Tiles_134: -1209949676415075043
+      Outdoor Stuff Tiles_135: 563341484670699293
+      Outdoor Stuff Tiles_136: -2574437719012230260
+      Outdoor Stuff Tiles_137: -8060116682648623240
+      Outdoor Stuff Tiles_138: 7916968312040979160
+      Outdoor Stuff Tiles_139: 4452771849182195964
+      Outdoor Stuff Tiles_14: -8297908387391460211
+      Outdoor Stuff Tiles_140: 3638557177545557669
+      Outdoor Stuff Tiles_141: 1063338687284384628
+      Outdoor Stuff Tiles_142: 8371573389792021863
+      Outdoor Stuff Tiles_143: 1978278416066333499
+      Outdoor Stuff Tiles_144: -1069165968743296087
+      Outdoor Stuff Tiles_145: -6098221924292966495
+      Outdoor Stuff Tiles_146: -6548343811289475459
+      Outdoor Stuff Tiles_147: -1142793668635731300
+      Outdoor Stuff Tiles_148: -7621312318417539177
+      Outdoor Stuff Tiles_149: -9065774262394001600
+      Outdoor Stuff Tiles_15: -6983654659286787115
+      Outdoor Stuff Tiles_150: -6744502029991490754
+      Outdoor Stuff Tiles_151: 6087160120710525737
+      Outdoor Stuff Tiles_152: -6275860374539477571
+      Outdoor Stuff Tiles_153: -8935566078119471866
+      Outdoor Stuff Tiles_154: -607627487587682695
+      Outdoor Stuff Tiles_155: -1293885268544662933
+      Outdoor Stuff Tiles_156: -2213279548502107331
+      Outdoor Stuff Tiles_157: 6957059526146239235
+      Outdoor Stuff Tiles_158: 2325557345324711032
+      Outdoor Stuff Tiles_159: -4209283866990519611
+      Outdoor Stuff Tiles_16: 7123505834709257835
+      Outdoor Stuff Tiles_160: 621886578905568679
+      Outdoor Stuff Tiles_161: -3853481090655545717
+      Outdoor Stuff Tiles_162: -7654534487007837995
+      Outdoor Stuff Tiles_163: 21745864849632722
+      Outdoor Stuff Tiles_164: 3651302528886004918
+      Outdoor Stuff Tiles_165: -234543365710846019
+      Outdoor Stuff Tiles_166: -3536523995165989177
+      Outdoor Stuff Tiles_167: -8271286261684851066
+      Outdoor Stuff Tiles_168: -7635539010510960247
+      Outdoor Stuff Tiles_169: -2226098623936361240
+      Outdoor Stuff Tiles_17: -8945755705234832453
+      Outdoor Stuff Tiles_170: -3060458871263804242
+      Outdoor Stuff Tiles_171: -7034047877155628883
+      Outdoor Stuff Tiles_172: -8424017666428245473
+      Outdoor Stuff Tiles_173: -8303796024051693497
+      Outdoor Stuff Tiles_174: 5735854198726211607
+      Outdoor Stuff Tiles_175: 1525901975660611320
+      Outdoor Stuff Tiles_176: 6261725384585667663
+      Outdoor Stuff Tiles_177: -1151547516668120611
+      Outdoor Stuff Tiles_178: 8917548700107284245
+      Outdoor Stuff Tiles_179: 1063862823980448693
+      Outdoor Stuff Tiles_18: 4991356463850020292
+      Outdoor Stuff Tiles_180: -7285294661445243740
+      Outdoor Stuff Tiles_181: -8164905252027831648
+      Outdoor Stuff Tiles_182: 6614601480766115108
+      Outdoor Stuff Tiles_183: -6272597064612142234
+      Outdoor Stuff Tiles_184: 2226946972540205368
+      Outdoor Stuff Tiles_185: -4277770796774097237
+      Outdoor Stuff Tiles_186: -1099851115637896999
+      Outdoor Stuff Tiles_187: -1085307319679161663
+      Outdoor Stuff Tiles_188: -913049822045539142
+      Outdoor Stuff Tiles_189: -6664426654807306342
+      Outdoor Stuff Tiles_19: 3474107571655985699
+      Outdoor Stuff Tiles_190: 3216215521792307175
+      Outdoor Stuff Tiles_191: -3018180117290705120
+      Outdoor Stuff Tiles_192: 4195973484542773353
+      Outdoor Stuff Tiles_193: 1388574429839875462
+      Outdoor Stuff Tiles_2: 8191753157787511168
+      Outdoor Stuff Tiles_20: 7937527117871322978
+      Outdoor Stuff Tiles_21: -4082428887235043681
+      Outdoor Stuff Tiles_22: 5395877312848081443
+      Outdoor Stuff Tiles_23: -8991928957856827546
+      Outdoor Stuff Tiles_24: -7181073806015560457
+      Outdoor Stuff Tiles_25: -2995377141642120200
+      Outdoor Stuff Tiles_26: -7218216286512709712
+      Outdoor Stuff Tiles_27: -7183941057189010230
+      Outdoor Stuff Tiles_28: -331836971247933796
+      Outdoor Stuff Tiles_29: -3959975738245361434
+      Outdoor Stuff Tiles_3: 3027309964035173800
+      Outdoor Stuff Tiles_30: -3245904187099410805
+      Outdoor Stuff Tiles_31: -843842469248311733
+      Outdoor Stuff Tiles_32: 4705343601615959803
+      Outdoor Stuff Tiles_33: 1551378557700790214
+      Outdoor Stuff Tiles_34: 6253761767890154675
+      Outdoor Stuff Tiles_35: 6695106907536938111
+      Outdoor Stuff Tiles_36: 6695710241604143305
+      Outdoor Stuff Tiles_37: -9033110646084346077
+      Outdoor Stuff Tiles_38: 7876500665501967135
+      Outdoor Stuff Tiles_39: -950271479152021694
+      Outdoor Stuff Tiles_4: 2536076801866640912
+      Outdoor Stuff Tiles_40: 4478784121355540609
+      Outdoor Stuff Tiles_41: -3727404499945929451
+      Outdoor Stuff Tiles_42: -3528533324943645903
+      Outdoor Stuff Tiles_43: 2376276973909049403
+      Outdoor Stuff Tiles_44: 5471545609324950766
+      Outdoor Stuff Tiles_45: -4199838444499764926
+      Outdoor Stuff Tiles_46: 659204139971378154
+      Outdoor Stuff Tiles_47: -6331745001866917983
+      Outdoor Stuff Tiles_48: 8623808959952306522
+      Outdoor Stuff Tiles_49: -9105014083338338726
+      Outdoor Stuff Tiles_5: -5472021941171661754
+      Outdoor Stuff Tiles_50: -3757956532010114795
+      Outdoor Stuff Tiles_51: -7935040718447535983
+      Outdoor Stuff Tiles_52: 6882259376307543762
+      Outdoor Stuff Tiles_53: 6675979823516771708
+      Outdoor Stuff Tiles_54: -4661863322668391350
+      Outdoor Stuff Tiles_55: -8825825383156708307
+      Outdoor Stuff Tiles_56: 8050777179824057068
+      Outdoor Stuff Tiles_57: 7789509413827773493
+      Outdoor Stuff Tiles_58: 3775927712205224939
+      Outdoor Stuff Tiles_59: -2590731963895070309
+      Outdoor Stuff Tiles_6: 7892070029758233025
+      Outdoor Stuff Tiles_60: 1200583341489465896
+      Outdoor Stuff Tiles_61: -579466176171820353
+      Outdoor Stuff Tiles_62: -7714223193929080144
+      Outdoor Stuff Tiles_63: 9187487724582512572
+      Outdoor Stuff Tiles_64: 3805349365268603920
+      Outdoor Stuff Tiles_65: -6413745462335698696
+      Outdoor Stuff Tiles_66: -4860595222811561558
+      Outdoor Stuff Tiles_67: -1069122497448265337
+      Outdoor Stuff Tiles_68: -8376111452383312967
+      Outdoor Stuff Tiles_69: -2331234578694860748
+      Outdoor Stuff Tiles_7: 8730955886139688089
+      Outdoor Stuff Tiles_70: -1061826853298554968
+      Outdoor Stuff Tiles_71: -1607148318410956693
+      Outdoor Stuff Tiles_72: 3550955709890415168
+      Outdoor Stuff Tiles_73: 5314607135546529966
+      Outdoor Stuff Tiles_74: 6982610937473370211
+      Outdoor Stuff Tiles_75: -3901519529178208976
+      Outdoor Stuff Tiles_76: 1256854314934184126
+      Outdoor Stuff Tiles_77: 1333170538428677980
+      Outdoor Stuff Tiles_78: -5434314916801943970
+      Outdoor Stuff Tiles_79: 5075486593554514169
+      Outdoor Stuff Tiles_8: 3753021898467439064
+      Outdoor Stuff Tiles_80: -69936031092150265
+      Outdoor Stuff Tiles_81: -320149451866869969
+      Outdoor Stuff Tiles_82: 1985385961143551964
+      Outdoor Stuff Tiles_83: -3231432946274924429
+      Outdoor Stuff Tiles_84: -8039072790327768705
+      Outdoor Stuff Tiles_85: 9026113942280993995
+      Outdoor Stuff Tiles_86: 3985852149211290697
+      Outdoor Stuff Tiles_87: 8116723554877633926
+      Outdoor Stuff Tiles_88: -6598456555536525925
+      Outdoor Stuff Tiles_89: 1881527123448128527
+      Outdoor Stuff Tiles_9: -743968977167617734
+      Outdoor Stuff Tiles_90: 4546346387437111957
+      Outdoor Stuff Tiles_91: -1155803803789672763
+      Outdoor Stuff Tiles_92: 1925375534769865080
+      Outdoor Stuff Tiles_93: -2575350040418102009
+      Outdoor Stuff Tiles_94: 6120700351043457301
+      Outdoor Stuff Tiles_95: 4509654696554217655
+      Outdoor Stuff Tiles_96: 3068452021161288426
+      Outdoor Stuff Tiles_97: 1015358336653560522
+      Outdoor Stuff Tiles_98: 5569843336530282486
+      Outdoor Stuff Tiles_99: 3305011534324955146
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

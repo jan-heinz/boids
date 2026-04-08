@@ -23,6 +23,10 @@ public class Sheepdog : MonoBehaviour
     [Tooltip("How close the sheepdog needs to get before stopping")]
     private float stopDistance = 0.1f;
 
+    [SerializeField]
+    [Tooltip("Layers the sheepdog should treat as blocking obstacles")]
+    private LayerMask obstacleLayers = 1 << 6;
+
     [Header("Pressure")]
     [SerializeField, Min(0f)]
     [Tooltip("How far the sheepdog can influence nearby sheep")]
@@ -110,6 +114,28 @@ public class Sheepdog : MonoBehaviour
         }
 
         Vector2 nextPosition = Vector2.MoveTowards(position, moveTarget, moveSpeed * Time.fixedDeltaTime);
+        Vector2 moveDelta = nextPosition - position;
+
+        if (obstacleLayers.value != 0 && moveDelta.sqrMagnitude > 0.0001f)
+        {
+            float moveDistance = moveDelta.magnitude;
+            Vector2 moveDirection = moveDelta / moveDistance;
+            RaycastHit2D hit = Physics2D.BoxCast(
+                position,
+                Vector2.one * collisionSize,
+                0f,
+                moveDirection,
+                moveDistance + 0.02f,
+                obstacleLayers
+            );
+
+            if (hit.collider != null)
+            {
+                float safeDistance = Mathf.Max(0f, hit.distance - 0.02f);
+                nextPosition = position + (moveDirection * safeDistance);
+                hasMoveTarget = safeDistance > stopDistance;
+            }
+        }
 
         if (rb != null)
         {

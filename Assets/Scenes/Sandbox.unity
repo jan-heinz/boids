@@ -194,7 +194,7 @@ Transform:
   m_GameObject: {fileID: 55072534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.92, y: 7.4, z: 0}
+  m_LocalPosition: {x: 40.4, y: 7.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -415,7 +415,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.2264151, g: 0.13700405, b: 0.056603774, a: 1}
@@ -436,8 +436,8 @@ Transform:
   m_GameObject: {fileID: 320816860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -41.21, y: 9.1826, z: 0}
-  m_LocalScale: {x: 39.722904, y: 1, z: 1}
+  m_LocalPosition: {x: -78.6783, y: 9.6, z: 0}
+  m_LocalScale: {x: 54.67063, y: 2.7989411, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 374324946}
@@ -588,7 +588,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.2264151, g: 0.13700405, b: 0.056603774, a: 1}
@@ -609,8 +609,8 @@ Transform:
   m_GameObject: {fileID: 845700459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.9464, y: 28.32, z: 0}
-  m_LocalScale: {x: 71.773056, y: 1, z: 1}
+  m_LocalPosition: {x: -6.8028, y: 37.5876, z: 0}
+  m_LocalScale: {x: 145.1274, y: 3.025142, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 374324946}
@@ -687,7 +687,7 @@ Transform:
   m_GameObject: {fileID: 868211599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.82, y: 8.14, z: 0}
+  m_LocalPosition: {x: -74.6, y: 8.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -804,7 +804,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.2264151, g: 0.13700405, b: 0.056603774, a: 1}
@@ -825,8 +825,8 @@ Transform:
   m_GameObject: {fileID: 1189898995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.3524, y: -9.92, z: 0}
-  m_LocalScale: {x: 70.979576, y: 1, z: 1}
+  m_LocalPosition: {x: -7, y: -17.6, z: 0}
+  m_LocalScale: {x: 142.15369, y: 2.4117763, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 374324946}
@@ -942,7 +942,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.2264151, g: 0.13700405, b: 0.056603774, a: 1}
@@ -963,8 +963,8 @@ Transform:
   m_GameObject: {fileID: 1328360094}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 29.87, y: 9.25, z: 0}
-  m_LocalScale: {x: 39.219643, y: 1, z: 1}
+  m_LocalPosition: {x: 64.5343, y: 9.6102, z: 0}
+  m_LocalScale: {x: 52.704914, y: 2.4520926, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 374324946}
@@ -1164,7 +1164,7 @@ Transform:
   m_GameObject: {fileID: 1900000001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.61, y: 25.37, z: 0}
+  m_LocalPosition: {x: -70.9, y: 29.6, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1243,12 +1243,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Sheepdog
   startsPlaced: 1
   collisionSize: 1.5
-  moveSpeed: 12
+  moveSpeed: 9
   stopDistance: 0.1
-  influenceRadius: 6
-  innerRadius: 2.5
-  pressureStrength: 1.5
-  innerPressureMultiplier: 3
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  influenceRadius: 12
+  innerRadius: 4
+  pressureStrength: 4
+  innerPressureMultiplier: 6
 --- !u!1 &1900000011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1298,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SheepdogPlacementController
   sheepdog: {fileID: 1900000004}
   cardLabel: 1
-  ghostOpacity: 0.45
 --- !u!1 &1900000021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,7 +1316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1900000022
 Transform:
   m_ObjectHideFlags: 0
@@ -1324,8 +1326,8 @@ Transform:
   m_GameObject: {fileID: 1900000021}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.58, y: -3.47, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -27.6, y: -4.8, z: 0}
+  m_LocalScale: {x: 3.5686, y: 3.5686, z: 3.5686}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1376,19 +1378,36 @@ MonoBehaviour:
     m_Bits: 64
   collisionRadius: 0.45
   stalkDistance: 5
+  stalkBand: 1.2
+  stalkDirectionChangeInterval: 1.6
+  stalkLeadDistance: 3
+  stalkFencePadding: 0.35
   retreatDistance: 6
+  retreatFencePadding: 0.6
   arrivalDistance: 0.15
   obstacleCheckDistance: 1.1
   eatRadius: 0.9
-  eatCooldown: 1
+  eatCooldown: 3
   retargetInterval: 0.35
+  stalkDurationMin: 4
+  stalkDurationMax: 10
   commitThreshold: -0.25
+  commitApproachOffset: 1.6
+  commitDirectChaseDistance: 2
+  lungeChance: 0.3
+  lungeDistance: 2.5
+  lungeSpeedMultiplier: 1.75
+  lungeCooldown: 2
   stragglerWeight: 1
   neighborPenalty: 0.8
   distancePenalty: 0.08
   sheepdogSafetyWeight: 0.1
   sheepdogAvoidRadius: 4
   sheepdogAvoidWeight: 2
+  stateLabelOffset: {x: 0, y: 0, z: -0.1}
+  stateLabelFontSize: 48
+  stateLabelCharacterSize: 0.12
+  stateLabelColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1900000025
 SpriteRenderer:
   serializedVersion: 2
@@ -1464,7 +1483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2123401093
 MonoBehaviour:
   m_ObjectHideFlags: 0
