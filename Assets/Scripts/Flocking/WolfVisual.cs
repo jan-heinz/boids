@@ -36,6 +36,14 @@ public class WolfVisual : MonoBehaviour
     [Tooltip("How quickly the run animation flips between frames")]
     private float runFrameRate = 8f;
 
+    [SerializeField, Min(0f)]
+    [Tooltip("How much horizontal movement is needed before the wolf flips facing")]
+    private float facingSwitchThreshold = 0.2f;
+
+    [SerializeField, Min(0f)]
+    [Tooltip("How much stronger horizontal movement must be than vertical movement before the wolf flips facing")]
+    private float horizontalDominanceThreshold = 0.05f;
+
     private FacingDirection facing = FacingDirection.Right;
     private float runTimer;
     private int currentRunFrame;
@@ -100,7 +108,11 @@ public class WolfVisual : MonoBehaviour
     // chooses the main direction from the current movement vector
     private FacingDirection GetFacingDirection(Vector2 velocity)
     {
-        if (Mathf.Abs(velocity.x) > 0.01f)
+        float horizontalSpeed = Mathf.Abs(velocity.x);
+        float verticalSpeed = Mathf.Abs(velocity.y);
+
+        if (horizontalSpeed >= facingSwitchThreshold &&
+            horizontalSpeed >= verticalSpeed + horizontalDominanceThreshold)
         {
             return velocity.x >= 0f ? FacingDirection.Right : FacingDirection.Left;
         }

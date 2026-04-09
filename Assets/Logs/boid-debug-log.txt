@@ -1,5 +1,5 @@
-boid debug log 2026-04-07 19:14:44
-move speed = 6.00
+boid debug log 2026-04-08 20:56:54
+move speed = 4.00
 max steering force = 12.00
 neighbor radius = 3.25
 separation radius = 2.00
@@ -10,14 +10,19 @@ cohesion weight = 0.50
 bounds weight = 2.00
 log interval = 0.75
 log fence behavior = False
-log boid behavior = True
+log boid behavior = False
+log wolf behavior = True
 log movement state = True
-log neighbor state = True
-log boid summary = True
-log separation force = True
-log alignment force = True
-log cohesion force = True
-log boid steering force = True
+log wolf movement state = True
+log neighbor state = False
+log boid summary = False
+log wolf target state = True
+log wolf retreat state = True
+log wolf obstacle state = True
+log separation force = False
+log alignment force = False
+log cohesion force = False
+log boid steering force = False
 log front hit = False
 log left hit = False
 log right hit = False
@@ -27,5 +32,5 @@ log corner state = False
 log stuck time = False
 log desired direction = False
 log steering force = False
-only log active sheep = True
+only log active sheep = False
 

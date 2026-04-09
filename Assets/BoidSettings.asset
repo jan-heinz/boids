@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0004e32608d149b9af8b01a54c622c5, type: 3}
   m_Name: BoidSettings
   m_EditorClassIdentifier: Assembly-CSharp::Boids.Flocking.BoidSettings
-  moveSpeed: 3
+  moveSpeed: 4
   maxSteeringForce: 12
   neighborRadius: 3.25
   separationRadius: 2

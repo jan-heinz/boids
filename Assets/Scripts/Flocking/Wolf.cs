@@ -1048,6 +1048,7 @@ public class Wolf : MonoBehaviour
     {
         state = WolfState.Retreat;
         stateTimer = 0f;
+        stuckTime = 0f;
         retreatTarget = GetRetreatPoint();
         targetSheep = null;
     }
@@ -1105,6 +1106,8 @@ public class Wolf : MonoBehaviour
             return;
         }
 
+        labelRenderer.enabled = BoidDebugPanel.ShowWolfStateLabel;
+
         if (stateLabel.font != null)
         {
             labelRenderer.sharedMaterial = stateLabel.font.material;
@@ -1125,6 +1128,13 @@ public class Wolf : MonoBehaviour
         if (stateLabel == null)
         {
             return;
+        }
+
+        MeshRenderer labelRenderer = stateLabel.GetComponent<MeshRenderer>();
+
+        if (labelRenderer != null)
+        {
+            labelRenderer.enabled = BoidDebugPanel.ShowWolfStateLabel;
         }
 
         stateLabel.text = state switch
